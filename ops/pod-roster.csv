@@ -1,0 +1,37 @@
+PM_Pod,Role,Slot,Primary_Assignee,Backup_Assignee,Execution_Mode
+PM-Alpha,Product Manager,1,arcade-pm,arcade-agent-08,management
+PM-Alpha,Engineer,1,arcade-dev-01,arcade-agent-01,codex-spark
+PM-Alpha,Engineer,2,arcade-agent-02,arcade-agent-03,codex-spark
+PM-Alpha,Engineer,3,arcade-agent-04,arcade-agent-05,codex-spark
+PM-Alpha,Engineer,4,codex-spark-lane-alpha-4,arcade-agent-06,codex-spark
+PM-Alpha,Engineer,5,codex-spark-lane-alpha-5,arcade-agent-10,codex-spark
+PM-Alpha,QA,1,arcade-agent-06,arcade-agent-10,qa
+PM-Alpha,QA,2,arcade-agent-01,arcade-agent-02,qa
+PM-Alpha,Game Designer,1,game-designer-miyamoto,game-designer-okamoto,design
+PM-Alpha,Game Designer,2,game-designer-ikeda,game-designer-kojima,design
+PM-Alpha,Test Engineer,1,fps-designer-le,arcade-agent-03,test
+PM-Alpha,Test Engineer,2,fps-designer-walker,fps-designer-sugg,test
+PM-Beta,Product Manager,1,arcade-agent-08,arcade-pm,management
+PM-Beta,Engineer,1,arcade-dev-02,arcade-agent-03,codex-spark
+PM-Beta,Engineer,2,arcade-agent-05,arcade-agent-06,codex-spark
+PM-Beta,Engineer,3,arcade-agent-07,arcade-agent-10,codex-spark
+PM-Beta,Engineer,4,codex-spark-lane-beta-4,arcade-agent-04,codex-spark
+PM-Beta,Engineer,5,codex-spark-lane-beta-5,arcade-agent-01,codex-spark
+PM-Beta,QA,1,arcade-agent-02,arcade-agent-04,qa
+PM-Beta,QA,2,arcade-agent-05,arcade-agent-07,qa
+PM-Beta,Game Designer,1,game-designer-kojima,game-designer-ikeda,design
+PM-Beta,Game Designer,2,game-designer-miyamoto,game-designer-okamoto,design
+PM-Beta,Test Engineer,1,fps-designer-sugg,arcade-agent-06,test
+PM-Beta,Test Engineer,2,fps-designer-le,fps-designer-walker,test
+PM-Gamma,Product Manager,1,arcade-agent-09,arcade-pm,management
+PM-Gamma,Engineer,1,arcade-dev-03,arcade-agent-10,codex-spark
+PM-Gamma,Engineer,2,arcade-agent-01,arcade-agent-02,codex-spark
+PM-Gamma,Engineer,3,arcade-agent-03,arcade-agent-04,codex-spark
+PM-Gamma,Engineer,4,codex-spark-lane-gamma-4,arcade-agent-05,codex-spark
+PM-Gamma,Engineer,5,codex-spark-lane-gamma-5,arcade-agent-06,codex-spark
+PM-Gamma,QA,1,arcade-agent-07,arcade-agent-08,qa
+PM-Gamma,QA,2,arcade-agent-10,arcade-agent-01,qa
+PM-Gamma,Game Designer,1,game-designer-okamoto,game-designer-miyamoto,design
+PM-Gamma,Game Designer,2,game-designer-ikeda,game-designer-kojima,design
+PM-Gamma,Test Engineer,1,fps-designer-walker,fps-designer-sugg,test
+PM-Gamma,Test Engineer,2,fps-designer-le,arcade-agent-02,test
