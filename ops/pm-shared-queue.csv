@@ -1,6 +1,9 @@
 Task_ID,Title,Owner_PM,Lane,Assignee_Type,Priority,Status,Definition_of_Done,Notes
-Q001,Stabilize playable web build,PM-Gamma,ENG-1,Engineer,High,In Progress,Playable build on web URL + smoke pass,Primary release objective
-Q002,Campaign content completeness,PM-Beta,DES-1,Game Designer,High,Queued,All four campaigns validated vs design spec,
+Q001,Stabilize playable web build,PM-Gamma,ENG-1,Engineer,High,IN_PROGRESS,Playable build on web URL + smoke pass,Primary release objective
+Q002,Campaign content completeness,PM-Beta,DES-1,Game Designer,High,IN_PROGRESS,All four campaigns validated vs design spec,
 Q003,Gameplay tuning pass,PM-Alpha,ENG-2,Engineer,Medium,Queued,Weapon/hitbox tuning merged + validated,
-Q004,Regression checklist run,PM-Gamma,QA-1,QA,High,Queued,Checklist green for launch candidate,
+Q004,Regression checklist run,PM-Gamma,QA-1,QA,High,IN_PROGRESS,Checklist green for launch candidate,
 Q005,Edge-case test plan,PM-Gamma,TEST-1,Test Engineer,Medium,Queued,Repro scripts + failure matrix captured,
+Q006,PR Track - Enemy System,PM-Gamma,ENG-1,Engineer,High,IN_PROGRESS,Enemy system PR merged to main + smoke verified,manual deployment trigger completed; monitoring only
+Q007,PR Track - Weapon Tuning,PM-Gamma,ENG-2,Engineer,High,IN_PROGRESS,Weapon tuning PR merged to main + smoke verified,manual deployment trigger completed; monitoring only
+Q008,PR Track - Stage Flow,PM-Gamma,ENG-3,Engineer,Medium,IN_PROGRESS,Stage flow PR merged to main + smoke verified,manual deployment trigger completed; monitoring only

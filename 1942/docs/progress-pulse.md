@@ -1,31 +1,13 @@
 # 1942 Progress Pulse
 
-_Date: 2026-03-03 (Codex Spark execution wave kickoff)_
+_Timestamp: 2026-03-03 22:57 PST_
 
-## Active implementation tasks
+Tonight sprint execution is active with three PR tracks in **IN_PROGRESS**:
 
-- **T015 — Enemy Wave System Refactor**  
-  Owner: **arcade-dev-01**  
-  Status: **IN_PROGRESS**  
-  Deliverable: deterministic wave scheduler + rebalanced spawn tables across campaigns.
+- **Enemy system** (arcade-dev-01)
+- **Weapon tuning** (arcade-dev-02)
+- **Stage flow** (arcade-dev-03)
 
-- **T016 — Player Weapon Balance and Hitbox Tuning**  
-  Owner: **arcade-dev-02**  
-  Status: **IN_PROGRESS**  
-  Deliverable: weapon fire-rate/damage rebalance + collision hitbox tuning with telemetry hooks.
+Priority queue remains active on **Q001 / Q002 / Q004**.
 
-- **T017 — Stage Flow and Checkpoint Validation**  
-  Owner: **arcade-dev-03**  
-  Status: **IN_PROGRESS**  
-  Deliverable: playable stage flow + checkpoint recovery validation across campaigns.
-
-## Owners
-
-- arcade-dev-01: gameplay wave system implementation
-- arcade-dev-02: combat tuning and collision balancing
-- arcade-dev-03: level flow and checkpoint stability
-
-## Next checkpoint
-
-**Next PM checkpoint:** 2026-03-04 10:00 PST  
-Review in-progress branch diffs, validate dependency handoffs (T013/T014/T015), and update ETA confidence for integration QA.
+**Blocker state:** manual deployment trigger completed; monitoring only.
