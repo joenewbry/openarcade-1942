@@ -136,6 +136,24 @@ const ROLL_TRAIL_MAX = 4;
 const GRAZE_RADIUS = 56;
 const GRAZE_POINTS = 25;
 
+// T016 final pass: conservative combat tuning constants
+const WEAPON_TUNING = Object.freeze({
+  spreadAngles: [-0.30, -0.15, 0, 0.15, 0.30],
+  spreadLateralSpeed: 7.6,
+  laserWidth: 8,
+  laserHeight: 60,
+  laserPierce: 4,
+  homingSideVx: 2.4,
+  homingForwardFactor: 0.76,
+});
+
+const HITBOX_TUNING = Object.freeze({
+  playerWidthScale: 0.80,
+  playerHeightScale: 0.76,
+  playerYOffset: 4,
+  focusRingRadius: 7,
+});
+
 class Sfx {
   constructor() {
     this.ctx = null;
@@ -211,6 +229,26 @@ function rand(min, max) {
 
 function rectHit(a, b) {
   return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+}
+
+function centeredHitbox(entity, widthScale, heightScale, yOffset = 0) {
+  const w = entity.w * widthScale;
+  const h = entity.h * heightScale;
+  return {
+    x: entity.x + (entity.w - w) * 0.5,
+    y: entity.y + (entity.h - h) * 0.5 + yOffset,
+    w,
+    h,
+  };
+}
+
+function playerHitbox(player) {
+  return centeredHitbox(
+    player,
+    HITBOX_TUNING.playerWidthScale,
+    HITBOX_TUNING.playerHeightScale,
+    HITBOX_TUNING.playerYOffset,
+  );
 }
 
 function spriteSize(spriteId, scale) {
@@ -855,12 +893,13 @@ function spawnPlayerBullets(state, mode = 'normal') {
   // Weapon-type-based firing
   if (weaponType === 'spread') {
     // Spread shot: 5 bullets in a fan
-    const angles = [-0.35, -0.17, 0, 0.17, 0.35];
+    const angles = WEAPON_TUNING.spreadAngles;
     for (const angle of angles) {
       state.bullets.push({
         x: baseX - BULLET_SIZE / 2, y: baseY,
         w: BULLET_SIZE, h: 36,
-        vx: Math.sin(angle) * 8, vy: speed * Math.cos(angle),
+        vx: Math.sin(angle) * WEAPON_TUNING.spreadLateralSpeed,
+        vy: speed * Math.cos(angle),
         pierce: 0, color: '#ff9944',
       });
     }
@@ -868,28 +907,30 @@ function spawnPlayerBullets(state, mode = 'normal') {
     // Laser: 2 piercing beams, tall and narrow
     state.bullets.push({
       x: baseX - 4, y: baseY,
-      w: 8, h: 60,
+      w: WEAPON_TUNING.laserWidth, h: WEAPON_TUNING.laserHeight,
       vx: 0, vy: speed - 4,
-      pierce: 5, color: '#44ffaa',
+      pierce: WEAPON_TUNING.laserPierce, color: '#44ffaa',
     });
     state.bullets.push({
       x: baseX - 4, y: baseY - 50,
-      w: 8, h: 60,
+      w: WEAPON_TUNING.laserWidth, h: WEAPON_TUNING.laserHeight,
       vx: 0, vy: speed - 4,
-      pierce: 5, color: '#44ffaa',
+      pierce: WEAPON_TUNING.laserPierce, color: '#44ffaa',
     });
   } else if (weaponType === 'homing') {
     // Homing missiles: 2 missiles that track nearest enemy
     state.bullets.push({
       x: baseX - 16, y: baseY,
       w: BULLET_SIZE, h: 36,
-      vx: -3, vy: speed * 0.7,
+      vx: -WEAPON_TUNING.homingSideVx,
+      vy: speed * WEAPON_TUNING.homingForwardFactor,
       pierce: 0, color: '#ff44ff', homing: true,
     });
     state.bullets.push({
       x: baseX + 4, y: baseY,
       w: BULLET_SIZE, h: 36,
-      vx: 3, vy: speed * 0.7,
+      vx: WEAPON_TUNING.homingSideVx,
+      vy: speed * WEAPON_TUNING.homingForwardFactor,
       pierce: 0, color: '#ff44ff', homing: true,
     });
   } else {
@@ -2034,10 +2075,12 @@ function updateGame(state, game, input) {
   }
   state.particles = state.particles.filter((p) => p.life > 0);
 
+  const playerHB = playerHitbox(player);
+
   // -- Graze detection (ARCADE-015: enhanced during focus mode) --
   {
-    const pcx = player.x + player.w / 2;
-    const pcy = player.y + player.h / 2;
+    const pcx = playerHB.x + playerHB.w / 2;
+    const pcy = playerHB.y + playerHB.h / 2;
     for (const eb of state.enemyBullets) {
       if (eb.grazed) continue;
       const bcx = eb.x + eb.w / 2;
@@ -2045,7 +2088,7 @@ function updateGame(state, game, input) {
       const dx = bcx - pcx;
       const dy = bcy - pcy;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < GRAZE_RADIUS && !rectHit(eb, player)) {
+      if (dist < GRAZE_RADIUS && !rectHit(eb, playerHB)) {
         eb.grazed = true;
         state.grazeCount += 1;
         // Focus mode: 2x graze multiplier bonus
@@ -2096,7 +2139,7 @@ function updateGame(state, game, input) {
   }
 
   for (let i = state.enemyBullets.length - 1; i >= 0; i--) {
-    if (rectHit(state.enemyBullets[i], player)) {
+    if (rectHit(state.enemyBullets[i], playerHB)) {
       state.enemyBullets.splice(i, 1);
       if (damagePlayer(state)) {
         game.setState('over');
@@ -2108,7 +2151,7 @@ function updateGame(state, game, input) {
 
   for (let i = state.enemies.length - 1; i >= 0; i--) {
     const e = state.enemies[i];
-    if (rectHit(e, player)) {
+    if (rectHit(e, playerHB)) {
       state.enemies.splice(i, 1);
       if (damagePlayer(state)) {
         game.setState('over');
@@ -3015,11 +3058,12 @@ export function createGame() {
 
     // ARCADE-015: Focus mode — draw hitbox dot and FOCUS text
     if (state.focusActive) {
-      const pcx = state.player.x + state.player.w / 2;
-      const pcy = state.player.y + state.player.h / 2;
+      const phb = playerHitbox(state.player);
+      const pcx = phb.x + phb.w / 2;
+      const pcy = phb.y + phb.h / 2;
       renderer.fillCircle(pcx, pcy, 3, '#ffffff');
       // Outer glow ring
-      renderer.fillCircle(pcx, pcy, 6, 'rgba(255,255,255,0.3)');
+      renderer.fillCircle(pcx, pcy, HITBOX_TUNING.focusRingRadius, 'rgba(255,255,255,0.3)');
       text.drawText('FOCUS', pcx - 30, state.player.y + state.player.h + 8, 20, '#ffffff');
     }
 
