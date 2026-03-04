@@ -21,6 +21,8 @@ export const CAMPAIGNS = [
       18: 'wingman',         // Allied wingman for the final push
     },
     finalWave: 20,
+    // T015 balance map (enemy counts by wave): 3,4,5,5,4 | 3,6,7,6,5 | 8,7,8,10,6 | 10,8,9,12,3
+    // Escort waves intentionally dip to create recovery windows before/after miniboss pressure.
     // ── C1: Tutorial campaign — gentle ramp, teaches basics ──
     // ARCADE-071/072: All patterns are now smooth predefined paths. No side entries in C1.
     waves: [
@@ -43,7 +45,7 @@ export const CAMPAIGNS = [
       // Act 3: Escalation (W11-14) — swooping arcs introduced
       { pattern: 'formation', mix: ['scout_zero', 'torpedo_gull'], count: 8 },   // W11: big formation
       { pattern: 'swirl',     mix: ['torpedo_gull'], count: 7 },  // W12: swooping arcs
-      { pattern: 'cross',     mix: ['scout_zero', 'torpedo_gull'], count: 9 },   // W13: sine waves
+      { pattern: 'cross',     mix: ['scout_zero', 'torpedo_gull'], count: 8 },   // W13: sine waves + ambush moment (kept 1 lower to avoid spike stacking)
       { pattern: 'stagger',   mix: ['torpedo_gull', 'scout_zero'], count: 10 },  // W14: dense zigzag
       // W15: MINIBOSS — reef_guardian
       { pattern: 'vee',       mix: ['scout_zero', 'torpedo_gull'], count: 6 },   // W15 escort
@@ -75,6 +77,8 @@ export const CAMPAIGNS = [
     doubleMiniWaves: [10],             // spawn 2 mini bosses on these waves
     signatureMoments: { 6: 'ambush_all_edges' },
     finalWave: 20,
+    // T015 balance map: 6,8,5,4,8 | 9,8,9,10,6 | 8,11,12,10,12 | 11,13,10,14,4
+    // Intent: keep high pressure but smooth mid-act spike where scripted ambush overlaps mixed patterns.
     // ── C2: Aggressive — early boss surprise, ambush at W6 ──
     // ARCADE-071/072: Smooth paths. Side entries introduced from W6 onward.
     waves: [
@@ -87,7 +91,7 @@ export const CAMPAIGNS = [
       // Act 2: Build with gunships, ambush at W6 (W4-9) — sides introduced
       { pattern: 'line',      mix: ['gunship_hornet'], count: 4 }, // W4: introduce gunships
       { pattern: 'cross',     mix: ['canopy_raider', 'gunship_hornet'], count: 8 },  // W5: sine waves
-      { pattern: 'swirl',     mix: ['canopy_raider', 'gunship_hornet'], count: 10 }, // W6: ambush arcs!
+      { pattern: 'swirl',     mix: ['canopy_raider', 'gunship_hornet'], count: 9 }, // W6: ambush arcs (trimmed 1 for readable difficulty ramp)
       { pattern: 'figure8',   mix: ['canopy_raider'], count: 8 }, // W7: figure-8 patterns
       { pattern: 'dive',      mix: ['gunship_hornet', 'canopy_raider'], count: 9 },  // W8: diving swoops
       { pattern: 'cross',     mix: ['canopy_raider', 'gunship_hornet', 'scout_zero'], count: 10 }, // W9: 3-type sine
@@ -133,6 +137,8 @@ export const CAMPAIGNS = [
     },
     finalBossScale: 1.5,               // extra-tough final boss
     finalWave: 20,
+    // T015 balance map: 6,7,8,9,8 | 5,9,10,10,7 | 10,11,10,12,11 | 12,13,13,15,4
+    // No miniboss relief in C3; count progression is steadier, with late-act spikes capped for survivability.
     // ── C3: Endurance — no minibosses, relentless waves, escalating density ──
     // ARCADE-071: All predefined paths. Side entries from W8 onward.
     waves: [
@@ -159,7 +165,7 @@ export const CAMPAIGNS = [
 
       // Act 4: Gauntlet run (W16-19) — max pressure, all path types
       { pattern: 'figure8',   mix: ['gunship_hornet', 'rail_bomber'], count: 12 },   // W16: figure-8 fire
-      { pattern: 'stagger',   mix: ['dune_lancer', 'rail_bomber', 'gunship_hornet'], count: 14 }, // W17: max zigzag
+      { pattern: 'stagger',   mix: ['dune_lancer', 'rail_bomber', 'gunship_hornet'], count: 13 }, // W17: max zigzag (capped to preserve endurance pacing)
       { pattern: 'dive',      mix: ['dune_lancer', 'gunship_hornet'], count: 13 },   // W18: diving frenzy
       { pattern: 'swirl',     mix: ['rail_bomber', 'dune_lancer', 'gunship_hornet'], count: 15 }, // W19: climax arcs
       // W20: FINAL BOSS — dust_colossus (1.5x scale)
@@ -190,6 +196,8 @@ export const CAMPAIGNS = [
       17: 'powerup_shower',   // Final power-up boost before climax
     },
     finalWave: 20,
+    // T015 balance map: 8,9,10,5 | 10,11,11,6 | 10,12,13,7 | 14,13,14,8 | 15,14,16,4
+    // Boss-every-4 structure keeps escort dips explicit; pre-boss spikes are tuned to stay readable, not random.
     // ── C4: The Gauntlet — bosses every 4 waves, 4 enemy types, max chaos ──
     // ARCADE-071: Full path variety. All entry directions. Every pattern type used.
     waves: [
@@ -203,7 +211,7 @@ export const CAMPAIGNS = [
       // Segment 2: Escalation (W5-8, boss at W8)
       { pattern: 'swirl',     mix: ['storm_wraith', 'dune_lancer'], count: 10 },    // W5: arcs + lancers
       { pattern: 'figure8',   mix: ['sub_spear', 'dune_lancer'], count: 11 },       // W6: figure-8 mix
-      { pattern: 'dive',      mix: ['storm_wraith', 'sub_spear', 'dune_lancer'], count: 12 }, // W7: 3-type dive
+      { pattern: 'dive',      mix: ['storm_wraith', 'sub_spear', 'dune_lancer'], count: 11 }, // W7: 3-type dive (trimmed before W8 miniboss)
       // W8: MINIBOSS — monsoon_blade
       { pattern: 'stagger',   mix: ['storm_wraith', 'dune_lancer'], count: 6 },     // W8 escort
 
