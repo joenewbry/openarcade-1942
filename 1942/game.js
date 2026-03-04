@@ -317,6 +317,7 @@ function makeInitialState(planeId) {
     bossWarningTimer: 0,
     bossWarningIsFinal: false,
     pendingBossWave: false,
+    campaignAdvanceLock: false,
     shownMilestones: new Set(),
     scorePops: [],
     grazeCount: 0,
@@ -604,6 +605,12 @@ function enemyPatternVelocity(enemy, player) {
 
 function spawnWave(state) {
   const campaign = getCampaign(state.campaignIndex);
+  const minibossWaves = Array.isArray(campaign.minibossWaves) ? campaign.minibossWaves : [];
+  const doubleMiniWaves = Array.isArray(campaign.doubleMiniWaves) ? campaign.doubleMiniWaves : [];
+  const waveSpecs = Array.isArray(campaign.waves) ? campaign.waves : [];
+  const finalWave = Number.isFinite(campaign.finalWave) ? campaign.finalWave : waveSpecs.length;
+
+  if (waveSpecs.length === 0) return;
 
   // Remove wingman from previous wave
   if (state.signatureWingman) {
@@ -629,13 +636,13 @@ function spawnWave(state) {
   }
 
   const waveKey = `${campaign.id}:${state.wave}`;
-  if (campaign.minibossWaves.includes(state.wave)) {
+  if (minibossWaves.includes(state.wave)) {
     if (!state.shownMilestones.has(`${waveKey}:mini`)) {
       queueDialogue(state, getDialogue(campaign.id, 'miniboss'));
       state.shownMilestones.add(`${waveKey}:mini`);
       sfx.bossWarn();
     }
-    const isDouble = campaign.doubleMiniWaves && campaign.doubleMiniWaves.includes(state.wave);
+    const isDouble = doubleMiniWaves.includes(state.wave);
     if (isDouble) {
       // Spawn two mini bosses side by side
       const miniL = createEnemy(campaign.miniboss, W / 2 - 200, -180, 'mini', state.campaignIndex + 1, 'mini');
@@ -648,7 +655,7 @@ function spawnWave(state) {
     return;
   }
 
-  if (state.wave === campaign.finalWave) {
+  if (state.wave === finalWave) {
     if (!state.shownMilestones.has(`${waveKey}:boss`)) {
       queueDialogue(state, getDialogue(campaign.id, 'boss'), 280);
       state.shownMilestones.add(`${waveKey}:boss`);
@@ -713,7 +720,8 @@ function spawnWave(state) {
     // Still spawn a normal (lighter) wave alongside
   }
 
-  const spec = campaign.waves[(state.wave - 1) % campaign.waves.length];
+  const specIndex = Math.min(Math.max(state.wave - 1, 0), waveSpecs.length - 1);
+  const spec = waveSpecs[specIndex];
   const count = spec.count + Math.min(state.campaignIndex, 2);
   for (let i = 0; i < count; i++) {
     const id = spec.mix[i % spec.mix.length];
@@ -1115,7 +1123,8 @@ function activateBomb(state, game) {
         killEnemy(state, enemy);
         state.enemies.splice(i, 1);
         if (wasFinal && state.enemies.filter((x) => x.tier === 'final').length === 0) {
-          moveToNextCampaign(state, game);
+          tryMoveToNextCampaign(state, game);
+          return;
         }
       }
     }
@@ -1328,6 +1337,12 @@ function killEnemy(state, enemy) {
   }
 }
 
+function tryMoveToNextCampaign(state, game) {
+  if (state.campaignAdvanceLock) return;
+  state.campaignAdvanceLock = true;
+  moveToNextCampaign(state, game);
+}
+
 function moveToNextCampaign(state, game) {
   const campaign = getCampaign(state.campaignIndex);
 
@@ -1398,6 +1413,9 @@ function getDebriefStory(campaignIndex) {
 function updateGame(state, game, input) {
   const player = state.player;
   state.tick += 1;
+  // Reset once-per-frame transition guard. If a final boss death path advances
+  // campaign this frame, follow-up systems in the same tick cannot re-enter.
+  state.campaignAdvanceLock = false;
 
   // Update wave effects for ships
   const campaign = getCampaign(state.campaignIndex);
@@ -2088,7 +2106,7 @@ function updateGame(state, game, input) {
         killEnemy(state, e);
         state.enemies.splice(j, 1);
         if (wasFinal && state.enemies.filter((x) => x.tier === 'final').length === 0) {
-          moveToNextCampaign(state, game);
+          tryMoveToNextCampaign(state, game);
         }
       }
       break;
@@ -2145,6 +2163,20 @@ function updateGame(state, game, input) {
   }
 
   if (state.enemies.length === 0 && game.state === 'playing') {
+    // If campaign transition UI is active, do not run stage progression logic.
+    if (state.debriefTimer > 0 || state.campaignIntroTimer > 0) return;
+
+    const campaign = getCampaign(state.campaignIndex);
+    const minibossWaves = Array.isArray(campaign.minibossWaves) ? campaign.minibossWaves : [];
+    const finalWave = Number.isFinite(campaign.finalWave) ? campaign.finalWave : 20;
+
+    // Fail-safe: if final wave ever ends with no enemies and we didn't already
+    // transition (e.g. scripted despawn edge case), advance campaign once.
+    if (state.wave >= finalWave && state.bossWarningTimer <= 0) {
+      tryMoveToNextCampaign(state, game);
+      return;
+    }
+
     // Boss warning phase — count down, then spawn boss wave
     if (state.bossWarningTimer > 0) {
       state.bossWarningTimer -= 1;
@@ -2179,12 +2211,11 @@ function updateGame(state, game, input) {
     state.waveDelay -= 1;
     if (state.waveDelay <= 0) {
       // Check if next wave is a boss wave
-      const campaign = getCampaign(state.campaignIndex);
       const nextWave = state.wave + 1;
-      if (!state.pendingBossWave && (campaign.minibossWaves.includes(nextWave) || nextWave === campaign.finalWave)) {
+      if (!state.pendingBossWave && (minibossWaves.includes(nextWave) || nextWave === finalWave)) {
         // ARCADE-081: Longer, more dramatic boss warning
         // Final boss gets 300 frames (5 sec), mini boss gets 210 frames (3.5 sec)
-        const isFinalBoss = nextWave === campaign.finalWave;
+        const isFinalBoss = nextWave === finalWave;
         state.bossWarningTimer = isFinalBoss ? 300 : 210;
         state.bossWarningIsFinal = isFinalBoss;
         state.pendingBossWave = true;

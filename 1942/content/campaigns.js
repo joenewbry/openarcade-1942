@@ -240,7 +240,8 @@ export const CAMPAIGNS = [
 ];
 
 export function getCampaign(index) {
-  if (index < 0) return CAMPAIGNS[0];
-  if (index >= CAMPAIGNS.length) return CAMPAIGNS[CAMPAIGNS.length - 1];
-  return CAMPAIGNS[index];
+  const normalized = Number.isFinite(index) ? Math.floor(index) : 0;
+  if (normalized < 0) return CAMPAIGNS[0];
+  if (normalized >= CAMPAIGNS.length) return CAMPAIGNS[CAMPAIGNS.length - 1];
+  return CAMPAIGNS[normalized];
 }
