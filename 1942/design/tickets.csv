@@ -1,0 +1,65 @@
+ticket_id,designer,priority,title,description,status,pr_number,implemented_date
+ARCADE-001,miyamoto,critical,Implement Wordless Tutorial W1-4,Hand-script tutorial waves with gated mechanics: W1=move W2=dodge W3=powerups W4=roll,deferred,,
+ARCADE-002,miyamoto+kojima+okamoto,critical,Reduce to 2 Planes for v1,Remove Falcon and Lancer from PLANES array. Ship only Specter + Atlas per design doc,implemented,2,2026-03-01
+ARCADE-003,miyamoto,critical,Add Movement Velocity Smoothing,Track player.vx/vy and lerp toward target speed for ~4 frame accel / ~6 frame decel,implemented,4,2026-03-01
+ARCADE-004,miyamoto+ikeda+okamoto,important,Fix Score Values to Design Doc,Set small=100 medium=250 mini boss=5000 final boss=25000. Add floating score pop text at kills,implemented,3,2026-03-01
+ARCADE-005,miyamoto+kojima+ikeda+okamoto,important,Add Wave Clear Transitions and Boss Warning,Show WAVE CLEAR text 90 frames + score bonus. Add 180-frame WARNING phase before bosses,implemented,5,2026-03-01
+ARCADE-006,miyamoto,important,Make Bombs Feel Powerful,Add 60-frame I-frames. Kill normals outright. Full-screen flash. 10pts per cancelled bullet,implemented,11,2026-03-01
+ARCADE-007,miyamoto,important,Remove NOT- Prefix from Campaign Names/IDs,Find-replace in campaigns.js and dialogue.js to remove not_/NOT- prefixes,implemented,direct-merge,2026-03-01
+ARCADE-008,miyamoto,important,Differentiate Enemy vs Player Bullet Visuals,Draw enemy bullets as diamonds/circles with white core. Keep player bullets rectangular,implemented,12,2026-03-01
+ARCADE-009,miyamoto+kojima+ikeda+okamoto,important,Add Death Consequences,Reset all buff timers on death. Add 30-frame entity freeze + screen shake. Drop shot tier,implemented,10,2026-03-01
+ARCADE-010,miyamoto,nice-to-have,Simplify Campaign Intro Phase,Remove campaign_intro phase. Add 3-second black screen with campaign name between campaigns,implemented,17,2026-03-01
+ARCADE-011,kojima+okamoto,critical,Implement Unique Campaign Structures,C2: boss W3/double W10. C3: no minis. C4: bosses W4/W8/W12/W16. Custom 20-wave arrays,implemented,13,2026-03-01
+ARCADE-012,kojima+ikeda,critical,Implement Boss Hit Zones,Split boss HP into 4 sections (port/starboard battery engine core). Phase transitions on section destruction,implemented-partial,14,2026-03-01
+ARCADE-013,kojima,important,Implement Signature Moments,Start with whale crossing C1 + ambush from all edges C2 + wingman C4,implemented,16,2026-03-01
+ARCADE-014,kojima+ikeda+okamoto,important,Implement Chain Scoring System,Track chainCount/chainTimer. Shrinking window 90→45 frames. Display chain multiplier prominently,implemented,9,2026-03-01
+ARCADE-015,kojima+ikeda+okamoto,nice-to-have,Add Focus Mode,Hold-Space: 1.5px/f speed + visible 3px hitbox dot. Tie to graze scoring,implemented,17,2026-03-01
+ARCADE-016,kojima,nice-to-have,World Reacts to Player Actions,Darken background on bomb. Boss death triggers ambient event. C4 lightning gameplay-relevant,implemented,17,2026-03-01
+ARCADE-017,ikeda+okamoto,critical,Implement Distinct Enemy Bullet Patterns,Per-enemy bullet behaviors: fighters=aimed gunships=burst bombers=slow drops. Color-code by speed tier,implemented,7,2026-03-01
+ARCADE-018,ikeda,critical,Implement Graze System,28px graze hitbox. 25pts × chain per graze. Spark particles + crystalline sound,implemented,8,2026-03-01
+ARCADE-019,ikeda,important,Integrate Bomb with Scoring System,Bomb resets chain to 0 (cost). Cancelled bullets award 10pts each. Add 90-frame I-frames,implemented,15,2026-03-01
+ARCADE-020,ikeda+okamoto,nice-to-have,Implement Roll Stock System,Replace cooldown with 3 stocks + 10s regen. Display as icons,implemented,17,2026-03-01
+ARCADE-021,okamoto,nice-to-have,Add 1-Up Score Milestones,1-up at 100k then every 200k. Max 5 lives. Distinctive sound + 1-UP text,implemented,17,2026-03-01
+ARCADE-022,gm,critical,Allow Shooting Before First Wave,"Players can't shoot until enemies appear. Root cause: intro dialogue blocks shooting via !state.dialogue condition in fire check. Allow firing during dialogue.",implemented,19,2026-03-01
+ARCADE-023,gm,important,First Wave Should Be Single Planes,"Wave 1 spawns 8 scouts in vee formation which is confusing. First wave should be 3-4 single planes coming one at a time in a simple line pattern.",implemented,21,2026-03-01
+ARCADE-024,gm,important,Early Enemy Bullets Should Go Straight Down,"Early enemies in C1 fire aimed shots at player. Wave 1-5 enemies should fire bullets straight down (vy only no vx). Aimed shots can come in later waves/campaigns.",implemented,21,2026-03-01
+ARCADE-025,gm,critical,Fix HUD Not Displaying,"All HUD text (score lives bombs chain graze roll stocks etc.) not showing. Icons not visible. Critical rendering issue.",implemented,20,2026-03-01
+ARCADE-026,gm,important,Add Parallax Scrolling Tile Background,"Background shows horizon gradient view. Should be top-down scrolling tiled background with parallax depth layers (slow bg layer + faster foreground clouds).",implemented,22,2026-03-01
+ARCADE-027,gm,important,Scale Up First Boss,"First boss takes up almost no screen space. Bosses should be imposing. Increase BOSS_SCALE significantly and ensure boss sprites render at larger size.",implemented,22,2026-03-01
+ARCADE-028,gm,critical,Fix Speed Reduction When Shooting/Moving,"Holding Space to shoot activates focus mode (state.focusActive = input.isDown Space) which reduces speed to 3px/frame. Separate focus mode from shoot key.",implemented,19,2026-03-01
+ARCADE-029,gm,important,Improve Sprite Graphics,"Generated sprites not quite right. Planes should look clearly top-down. Enemies should be single distinct entities not clustered. Regenerate problem sprites.",implemented,23,2026-03-01
+ARCADE-030,gm,important,Design Structured Level Maps,"Create structured 20-wave level maps for all 4 campaigns with hand-designed wave compositions",implemented,28,2026-03-01
+ARCADE-031,gm,important,Fix HUD Text Clipping,"HUD text elements are being clipped or not rendering properly at edges",implemented,26,2026-03-01
+ARCADE-032,gm,important,Scale Up Player Plane,"Player plane is too small on the 960x1280 canvas",implemented,24,2026-03-01
+ARCADE-033,gm,important,4-Layer Parallax Background,"Implement 4-layer parallax scrolling background system",implemented,27,2026-03-01
+ARCADE-034,gm,important,Scale Up Enemy Planes,"Enemy planes are too small and hard to see",implemented,24,2026-03-01
+ARCADE-035,gm,important,Fix Enemy Bullet Direction C1,"Ensure C1 enemy bullets fire straight down not aimed at player",implemented,25,2026-03-01
+ARCADE-036,gm,important,Scale Up Boss Sprites,"Boss sprites need to be larger and more imposing",implemented,24,2026-03-01
+ARCADE-037,gm,important,Reduce Early Enemy HP,"Early enemies have too much HP making them tedious",implemented,25,2026-03-01
+ARCADE-038,gm,important,Scale Up Bullet Sizes,"Player and enemy bullets are too small to see clearly",implemented,24,2026-03-01
+ARCADE-039,gm,important,Improve Bullet Visibility,"Add better visual effects to bullets for clarity",implemented,24,2026-03-01
+ARCADE-040,gm,important,Display Lives as Hearts,"Replace numeric lives display with heart icons",implemented,26,2026-03-01
+ARCADE-041,gm,important,Sprite-Based Clouds,"Replace primitive cloud shapes with sprite-based clouds",implemented,27,2026-03-01
+ARCADE-042,gm,important,Improve All Aircraft Sprites,"Regenerate aircraft sprites with proper top-down perspective",implemented,23,2026-03-01
+ARCADE-043,gm,important,Plane Selection Screen,"Add in-canvas plane selection screen with stats visualization",implemented,29,2026-03-01
+ARCADE-044,gm,nice-to-have,Multiplayer Co-Op,"Add multiplayer co-op via WebRTC/PeerJS with room codes and shareable links",implemented,30,2026-03-01
+ARCADE-045,gm,important,Scale Up Mini Boss Significantly,"Mini boss is still too small on screen after previous scaling. Increase MINI_BOSS_SCALE significantly.",implemented,31,2026-03-01
+ARCADE-046,gm,important,Fix Plane Select Screen Layout,"Plane select screen is grayed out with text spilling off bounds. Fix layout to be vibrant and contained.",implemented,34,2026-03-01
+ARCADE-047,gm,important,Remove Plane Tilt on Movement,"Remove the bank tilt/offset when player moves left/right. Plane should slide smoothly without rotation.",implemented,31,2026-03-01
+ARCADE-048,gm,important,Enemy Bullets Should Be Sprites,"Enemy bullets should be sprite-based and more colorful (red/pink). Not just primitive shapes.",implemented,35,2026-03-01
+ARCADE-049,gm,important,Clouds Should Match Art Style,"Cloud visuals should match the quality of plane sprites. Better looking and consistent art style.",implemented,35,2026-03-01
+ARCADE-050,gm,important,Scale Up Enemy Planes More,"Enemy planes still hard to see. Scale them up further.",implemented,31,2026-03-01
+ARCADE-051,gm,important,Increase All Bullet Sizes,"Both player and enemy projectiles need to be larger and more visible.",implemented,31,2026-03-01
+ARCADE-052,gm,important,Decrease First Mini Boss HP,"First mini boss (reef_guardian) too hard to beat. Reduce HP significantly.",implemented,32,2026-03-01
+ARCADE-053,gm,important,Mini Boss Better Loot Drops,"Mini boss drops should be more generous — drop multiple power-ups.",implemented,32,2026-03-01
+ARCADE-054,gm,critical,Small Planes Must Fire Straight Down,"Fighter-class enemies must fire STRAIGHT DOWN only. Remove all aimed shots for fighters. Recurring issue.",implemented,32,2026-03-01
+ARCADE-055,gm,important,Add Homing Missiles Power-Up,"New weapon type: homing missiles that track enemies. Should be a pickup item.",implemented,33,2026-03-01
+ARCADE-056,gm,important,Add Multiple Weapon Types,"Add weapon type system: spread shot laser homing missiles etc. Multiple options beyond basic shot.",implemented,33,2026-03-01
+ARCADE-057,gm,important,Power-Ups Should Stack and Last Longer,"Power-ups should: (a) last much longer (b) stack so multiple pickups = stronger. Builds run progression.",implemented,32,2026-03-01
+ARCADE-058,gm,important,Bomb Must Clear ALL Enemy Bullets,"Verify bomb clears every enemy bullet on screen. Check if ARCADE-006 implementation is complete.",verified,32,2026-03-01
+ARCADE-059,gm,nice-to-have,Remove Whale Signature Moment,"Remove the whale crossing in C1 entirely. Not needed.",implemented,32,2026-03-01
+ARCADE-060,gm,critical,Tiled Background System,"Background should be hand-designed tile-based layouts not procedurally generated. Each campaign needs designed map.",implemented,35,2026-03-01
+ARCADE-061,gm,critical,Fix Parallax Layer Order,"Correct layer order: Ocean(slowest) → Islands(slow fixed) → Clouds(fast). Islands must be same speed.",implemented,35,2026-03-01
+ARCADE-062,gm,critical,Islands Fixed to Map Terrain,"Islands should feel like painted terrain that scrolls beneath you — not floating objects.",implemented,35,2026-03-01
+ARCADE-063,gm,important,Topography Should Feel Like Flying Over Land,"Top-down perspective sliding across terrain. Pass over islands water and land features.",implemented,35,2026-03-01
+ARCADE-064,gm,important,Designer Pacing Review,"Have all 4 game designers review difficulty curve and progression pacing across all campaigns.",completed,36,2026-03-01

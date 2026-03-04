@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1942 Tile Preview Generator</title>
+  <style>
+    :root {
+      --bg: #0f1520;
+      --panel: #182235;
+      --panel-2: #22314a;
+      --ink: #f3f6fb;
+      --muted: #a8b8d1;
+      --accent: #3bb0ff;
+      --warn: #ffd166;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top, #1b2d4d, var(--bg));
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(300px, 360px) 1fr;
+    }
+
+    aside {
+      padding: 16px;
+      background: rgba(24, 34, 53, 0.9);
+      border-right: 1px solid rgba(168, 184, 209, 0.2);
+      overflow-y: auto;
+    }
+
+    main {
+      padding: 16px;
+      overflow: auto;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .box {
+      background: var(--panel-2);
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .box label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    input[type="file"], input[type="range"], button {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .inline {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .inline input[type="checkbox"] {
+      width: auto;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.88rem;
+      min-height: 2.4em;
+    }
+
+    canvas {
+      border: 1px solid rgba(168, 184, 209, 0.35);
+      background: #0b111a;
+      image-rendering: pixelated;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 960px) {
+      body {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        border-right: none;
+        border-bottom: 1px solid rgba(168, 184, 209, 0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>1942 Tile Preview</h1>
+
+    <div class="box">
+      <label>Level JSON
+        <input id="levelFile" type="file" accept="application/json" />
+      </label>
+      <label>Spritesheet Metadata JSON
+        <input id="metaFile" type="file" accept="application/json" />
+      </label>
+      <label>Spritesheet PNG
+        <input id="sheetFile" type="file" accept="image/png" />
+      </label>
+    </div>
+
+    <div class="box">
+      <div class="inline"><input id="showWater" type="checkbox" checked /><label for="showWater">Water layer</label></div>
+      <div class="inline"><input id="showTerrain" type="checkbox" checked /><label for="showTerrain">Terrain layer</label></div>
+      <div class="inline"><input id="showClouds" type="checkbox" checked /><label for="showClouds">Cloud layer</label></div>
+      <label>Start row <span id="rowValue">0</span>
+        <input id="startRow" type="range" min="0" max="0" step="1" value="0" />
+      </label>
+      <button id="renderBtn">Render Preview</button>
+    </div>
+
+    <div class="box status" id="status">Load level + metadata + spritesheet to render.</div>
+  </aside>
+
+  <main>
+    <canvas id="canvas" width="960" height="1280"></canvas>
+  </main>
+
+  <script>
+    const state = {
+      level: null,
+      meta: null,
+      sheetImage: null,
+    };
+
+    const el = {
+      levelFile: document.getElementById('levelFile'),
+      metaFile: document.getElementById('metaFile'),
+      sheetFile: document.getElementById('sheetFile'),
+      showWater: document.getElementById('showWater'),
+      showTerrain: document.getElementById('showTerrain'),
+      showClouds: document.getElementById('showClouds'),
+      startRow: document.getElementById('startRow'),
+      rowValue: document.getElementById('rowValue'),
+      renderBtn: document.getElementById('renderBtn'),
+      status: document.getElementById('status'),
+      canvas: document.getElementById('canvas'),
+    };
+
+    const ctx = el.canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+
+    function setStatus(text, warn = false) {
+      el.status.textContent = text;
+      el.status.style.color = warn ? 'var(--warn)' : 'var(--muted)';
+    }
+
+    function readJsonFile(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          try {
+            resolve(JSON.parse(reader.result));
+          } catch (err) {
+            reject(err);
+          }
+        };
+        reader.onerror = reject;
+        reader.readAsText(file);
+      });
+    }
+
+    function readImageFile(file) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = URL.createObjectURL(file);
+      });
+    }
+
+    function normalizeLevel(level) {
+      if (level.layers && level.layers.water && level.layers.terrain) {
+        return {
+          cols: level.cols,
+          rows: level.rows,
+          tileSize: level.tileSize || 64,
+          water: level.layers.water,
+          terrain: level.layers.terrain,
+          clouds: level.layers.clouds || [],
+        };
+      }
+      if (level.waterLayer && level.terrainLayer) {
+        return {
+          cols: level.cols,
+          rows: level.rows,
+          tileSize: level.tileSize || 64,
+          water: level.waterLayer,
+          terrain: level.terrainLayer,
+          clouds: level.cloudLayer || [],
+        };
+      }
+      throw new Error('Unsupported level format');
+    }
+
+    function frameById(meta) {
+      const out = {};
+      const frames = meta.frames || {};
+      for (const frame of Object.values(frames)) {
+        if (frame.id != null) out[frame.id] = frame.frame;
+      }
+      return out;
+    }
+
+    function drawLayer(grid, startRow, visibleRows, frameMap, tileSize) {
+      const maxRow = Math.min(startRow + visibleRows, grid.length);
+      for (let r = startRow; r < maxRow; r++) {
+        for (let c = 0; c < grid[r].length; c++) {
+          const id = grid[r][c];
+          if (!id) continue;
+          const frame = frameMap[id];
+          if (!frame) continue;
+          const dy = (r - startRow) * tileSize;
+          ctx.drawImage(
+            state.sheetImage,
+            frame.x,
+            frame.y,
+            frame.w,
+            frame.h,
+            c * tileSize,
+            dy,
+            tileSize,
+            tileSize
+          );
+        }
+      }
+    }
+
+    function render() {
+      if (!state.level || !state.meta || !state.sheetImage) {
+        setStatus('Missing input files. Load all three assets first.', true);
+        return;
+      }
+
+      const level = state.level;
+      const startRow = Number(el.startRow.value);
+      const tileSize = level.tileSize;
+      const visibleRows = Math.floor(el.canvas.height / tileSize);
+
+      ctx.clearRect(0, 0, el.canvas.width, el.canvas.height);
+      const frameMap = frameById(state.meta);
+
+      if (el.showWater.checked) drawLayer(level.water, startRow, visibleRows, frameMap, tileSize);
+      if (el.showTerrain.checked) drawLayer(level.terrain, startRow, visibleRows, frameMap, tileSize);
+      if (el.showClouds.checked && level.clouds.length > 0) drawLayer(level.clouds, startRow, visibleRows, frameMap, tileSize);
+
+      setStatus(`Rendered rows ${startRow}-${Math.min(level.rows - 1, startRow + visibleRows - 1)}.`);
+    }
+
+    el.levelFile.addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        state.level = normalizeLevel(await readJsonFile(file));
+        el.startRow.max = String(Math.max(0, state.level.rows - 1));
+        el.startRow.value = '0';
+        el.rowValue.textContent = '0';
+        setStatus(`Loaded level (${state.level.cols}x${state.level.rows}).`);
+      } catch (err) {
+        setStatus(`Level load failed: ${err.message}`, true);
+      }
+    });
+
+    el.metaFile.addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        state.meta = await readJsonFile(file);
+        setStatus('Loaded spritesheet metadata.');
+      } catch (err) {
+        setStatus(`Metadata load failed: ${err.message}`, true);
+      }
+    });
+
+    el.sheetFile.addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        state.sheetImage = await readImageFile(file);
+        setStatus('Loaded spritesheet image.');
+      } catch (err) {
+        setStatus(`Image load failed: ${err.message}`, true);
+      }
+    });
+
+    el.startRow.addEventListener('input', () => {
+      el.rowValue.textContent = el.startRow.value;
+    });
+
+    el.renderBtn.addEventListener('click', render);
+    [el.showWater, el.showTerrain, el.showClouds].forEach((checkbox) => checkbox.addEventListener('change', render));
+  </script>
+</body>
+</html>

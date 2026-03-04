@@ -1,0 +1,2414 @@
+{
+  "version": 2,
+  "generatedAt": "2026-02-25T20:09:05.025Z",
+  "model": "grok-imagine-image",
+  "api": "xAI Images API",
+  "outputDir": "1942/design/assets/highfi",
+  "styleGuide": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe",
+  "constraints": {
+    "perspective": "top_down_or_near_top_down_only",
+    "flow": "vertical_scrolling_shooter",
+    "hud": "single_player_top_bar",
+    "ambience": "whales_ambient_non_interactive_only",
+    "remove": [
+      "seagulls",
+      "dual_player_hud",
+      "side_view_units"
+    ]
+  },
+  "negativeStyle": "no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots",
+  "assetCount": 96,
+  "assets": [
+    {
+      "id": "campaign-coral",
+      "file": "campaign-coral.png",
+      "assetType": "campaign",
+      "campaignId": "c1",
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Campaign overview board for NOT-Coral Front. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. Show vertical shooter battlefield language and top-bar HUD readability.",
+      "sourcePromptHash": "46f9b521ecd68aea",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "campaign-jungle",
+      "file": "campaign-jungle.png",
+      "assetType": "campaign",
+      "campaignId": "c2",
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Campaign overview board for NOT-Jungle Spear. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. Show vertical shooter battlefield language and top-bar HUD readability.",
+      "sourcePromptHash": "6023498668dabbe2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "campaign-dust",
+      "file": "campaign-dust.png",
+      "assetType": "campaign",
+      "campaignId": "c3",
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Campaign overview board for NOT-Dust Convoy. desert dunes, convoy roads, armored columns, heat contrast readability. Show vertical shooter battlefield language and top-bar HUD readability.",
+      "sourcePromptHash": "7b1da794b6047ff4",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "campaign-monsoon",
+      "file": "campaign-monsoon.png",
+      "assetType": "campaign",
+      "campaignId": "c4",
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Campaign overview board for NOT-Iron Monsoon. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. Show vertical shooter battlefield language and top-bar HUD readability.",
+      "sourcePromptHash": "fd95107403e66541",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w01",
+      "file": "wave-c1-w01.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 1,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 1/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "9c81a7de4f9cc24a",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w02",
+      "file": "wave-c1-w02.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 2,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 2/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "386228a54f953d42",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w03",
+      "file": "wave-c1-w03.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 3,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 3/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "450d707e1d61de17",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w04",
+      "file": "wave-c1-w04.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 4,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 4/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "1a56a2ac18667bef",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w05",
+      "file": "wave-c1-w05.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 5,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 5/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "7d30e72bc9711712",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w06",
+      "file": "wave-c1-w06.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 6,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 6/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "fbbb7fed3912f053",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w07",
+      "file": "wave-c1-w07.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 7,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 7/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "7c4a868c38093129",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w08",
+      "file": "wave-c1-w08.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 8,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 8/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "12f9ddc6b7a57026",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w09",
+      "file": "wave-c1-w09.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 9,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 9/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "cd7ebe0adde1a858",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w10",
+      "file": "wave-c1-w10.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 10,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 10/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "8da38aa1ba1f6f0e",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w11",
+      "file": "wave-c1-w11.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 11,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 11/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "ca9f771645a9868b",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w12",
+      "file": "wave-c1-w12.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 12,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 12/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "d779e94ef4a728c4",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w13",
+      "file": "wave-c1-w13.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 13,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 13/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "ad9eb789cb685811",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w14",
+      "file": "wave-c1-w14.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 14,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 14/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "1e89068227a1643a",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w15",
+      "file": "wave-c1-w15.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 15,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 15/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "034dc3c8e56f6612",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w16",
+      "file": "wave-c1-w16.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 16,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 16/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "16fe25551b310f5b",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w17",
+      "file": "wave-c1-w17.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 17,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 17/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "25c64ec15b54365e",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w18",
+      "file": "wave-c1-w18.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 18,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 18/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "8e2fefa8c2f5bc3e",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w19",
+      "file": "wave-c1-w19.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 19,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 19/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "21ce4aabe8ed6078",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c1-w20",
+      "file": "wave-c1-w20.png",
+      "assetType": "wave",
+      "campaignId": "c1",
+      "waveNumber": 20,
+      "stage": "final_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Coral Front, wave 20/20. turquoise ocean, reefs, islands, whale surfacing loops, clean lanes. screen-dominant multi-section final boss with phase pressure and weak-point cues. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "3fe1d0a973609f41",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w01",
+      "file": "wave-c2-w01.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 1,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 1/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "52db980acab86132",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w02",
+      "file": "wave-c2-w02.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 2,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 2/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "1f5457cd04e1f59c",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w03",
+      "file": "wave-c2-w03.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 3,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 3/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "b133a2a5ab0509a4",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w04",
+      "file": "wave-c2-w04.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 4,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 4/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "223c92008191fb12",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w05",
+      "file": "wave-c2-w05.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 5,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 5/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "31699cec9699c38a",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w06",
+      "file": "wave-c2-w06.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 6,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 6/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "19c53895229795ff",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w07",
+      "file": "wave-c2-w07.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 7,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 7/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "ca1c8aaaabaffeca",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w08",
+      "file": "wave-c2-w08.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 8,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 8/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "46ef669e4aef1914",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w09",
+      "file": "wave-c2-w09.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 9,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 9/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "182d5f668d642d95",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w10",
+      "file": "wave-c2-w10.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 10,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 10/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "26ccb271016e734c",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w11",
+      "file": "wave-c2-w11.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 11,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 11/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "642757127bb34b98",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w12",
+      "file": "wave-c2-w12.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 12,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 12/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "9ce17bde0df66922",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w13",
+      "file": "wave-c2-w13.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 13,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 13/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "65204ee7e694bc4a",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w14",
+      "file": "wave-c2-w14.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 14,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 14/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "0ce50a29bcd95f9f",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w15",
+      "file": "wave-c2-w15.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 15,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 15/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "9d84aaab45429088",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w16",
+      "file": "wave-c2-w16.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 16,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 16/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "423ba335cf12fd8d",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w17",
+      "file": "wave-c2-w17.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 17,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 17/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "269c9172874bfc0e",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w18",
+      "file": "wave-c2-w18.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 18,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 18/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "45b083f60080b3e2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w19",
+      "file": "wave-c2-w19.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 19,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 19/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "1346c935307d01d3",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c2-w20",
+      "file": "wave-c2-w20.png",
+      "assetType": "wave",
+      "campaignId": "c2",
+      "waveNumber": 20,
+      "stage": "final_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Jungle Spear, wave 20/20. river channels, canopy gaps, anti-air outposts, high-contrast projectile lanes. screen-dominant multi-section final boss with phase pressure and weak-point cues. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "67f669c087ed4121",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w01",
+      "file": "wave-c3-w01.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 1,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 1/20. desert dunes, convoy roads, armored columns, heat contrast readability. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "99b155adc1e54fa6",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w02",
+      "file": "wave-c3-w02.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 2,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 2/20. desert dunes, convoy roads, armored columns, heat contrast readability. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "66769fbfe694e375",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w03",
+      "file": "wave-c3-w03.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 3,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 3/20. desert dunes, convoy roads, armored columns, heat contrast readability. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "9838bb1f3ac4fb20",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w04",
+      "file": "wave-c3-w04.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 4,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 4/20. desert dunes, convoy roads, armored columns, heat contrast readability. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "c433c60a3dceb2d9",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w05",
+      "file": "wave-c3-w05.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 5,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 5/20. desert dunes, convoy roads, armored columns, heat contrast readability. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "121eb883a58ea28d",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w06",
+      "file": "wave-c3-w06.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 6,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 6/20. desert dunes, convoy roads, armored columns, heat contrast readability. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "97e8c3c72aac8e47",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w07",
+      "file": "wave-c3-w07.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 7,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 7/20. desert dunes, convoy roads, armored columns, heat contrast readability. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "2544a963bb7bcaf2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w08",
+      "file": "wave-c3-w08.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 8,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 8/20. desert dunes, convoy roads, armored columns, heat contrast readability. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "d64f331cce9f362d",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w09",
+      "file": "wave-c3-w09.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 9,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 9/20. desert dunes, convoy roads, armored columns, heat contrast readability. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "23aa2861cf176b7b",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w10",
+      "file": "wave-c3-w10.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 10,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 10/20. desert dunes, convoy roads, armored columns, heat contrast readability. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "b3f8e98e618606ff",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w11",
+      "file": "wave-c3-w11.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 11,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 11/20. desert dunes, convoy roads, armored columns, heat contrast readability. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "140bae61eb840c0e",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w12",
+      "file": "wave-c3-w12.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 12,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 12/20. desert dunes, convoy roads, armored columns, heat contrast readability. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "f98c6db728a12075",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w13",
+      "file": "wave-c3-w13.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 13,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 13/20. desert dunes, convoy roads, armored columns, heat contrast readability. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "50828cca2b17ba1b",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w14",
+      "file": "wave-c3-w14.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 14,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 14/20. desert dunes, convoy roads, armored columns, heat contrast readability. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "5d79edba9a2a60c2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w15",
+      "file": "wave-c3-w15.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 15,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 15/20. desert dunes, convoy roads, armored columns, heat contrast readability. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "e9630bcb087e3c57",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w16",
+      "file": "wave-c3-w16.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 16,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 16/20. desert dunes, convoy roads, armored columns, heat contrast readability. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "b35afc1da41eb9a2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w17",
+      "file": "wave-c3-w17.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 17,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 17/20. desert dunes, convoy roads, armored columns, heat contrast readability. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "f2131ed19213cf5e",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w18",
+      "file": "wave-c3-w18.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 18,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 18/20. desert dunes, convoy roads, armored columns, heat contrast readability. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "41d613c7c570044f",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w19",
+      "file": "wave-c3-w19.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 19,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 19/20. desert dunes, convoy roads, armored columns, heat contrast readability. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "cc48fc8b2324cb30",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c3-w20",
+      "file": "wave-c3-w20.png",
+      "assetType": "wave",
+      "campaignId": "c3",
+      "waveNumber": 20,
+      "stage": "final_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Dust Convoy, wave 20/20. desert dunes, convoy roads, armored columns, heat contrast readability. screen-dominant multi-section final boss with phase pressure and weak-point cues. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "741a916d74ed28a2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w01",
+      "file": "wave-c4-w01.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 1,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 1/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "e28db72b93c615e3",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w02",
+      "file": "wave-c4-w02.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 2,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 2/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "55bd7b88dfe77d38",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w03",
+      "file": "wave-c4-w03.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 3,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 3/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "82e37af93389a606",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w04",
+      "file": "wave-c4-w04.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 4,
+      "stage": "onboarding",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 4/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. introduce enemy family and clear readable lanes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "17f2f8373498b773",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w05",
+      "file": "wave-c4-w05.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 5,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 5/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "0b6549dac0a18fc7",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w06",
+      "file": "wave-c4-w06.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 6,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 6/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "0ff321846d29b1c6",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w07",
+      "file": "wave-c4-w07.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 7,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 7/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "1ad668bd9f221631",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w08",
+      "file": "wave-c4-w08.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 8,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 8/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "3170b26c06ed9ac8",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w09",
+      "file": "wave-c4-w09.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 9,
+      "stage": "mixed_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 9/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. mix two enemy families with crossing fire lines. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "839d309421a157da",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w10",
+      "file": "wave-c4-w10.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 10,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 10/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "adb1a0a0ffb25dc2",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w11",
+      "file": "wave-c4-w11.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 11,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 11/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "ca2eaf7d8c4477f5",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w12",
+      "file": "wave-c4-w12.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 12,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 12/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "1df054fe94b35494",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w13",
+      "file": "wave-c4-w13.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 13,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 13/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "0ef8638fb77529f7",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w14",
+      "file": "wave-c4-w14.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 14,
+      "stage": "terrain_pressure",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 14/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. increase pressure while terrain stays readable. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "4da68c0e94efa0aa",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w15",
+      "file": "wave-c4-w15.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 15,
+      "stage": "mini_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 15/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. single mini boss plus escort units and dramatic but readable fire pattern. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "7d717fefc02e2a34",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w16",
+      "file": "wave-c4-w16.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 16,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 16/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "61ae838042956cc5",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w17",
+      "file": "wave-c4-w17.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 17,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 17/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "842e789fd5615a37",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w18",
+      "file": "wave-c4-w18.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 18,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 18/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "e4e488146480ce8f",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w19",
+      "file": "wave-c4-w19.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 19,
+      "stage": "high_density",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 19/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. dense projectile patterns with readable dodge routes. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "63b8ad6ce9483af9",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "wave-c4-w20",
+      "file": "wave-c4-w20.png",
+      "assetType": "wave",
+      "campaignId": "c4",
+      "waveNumber": 20,
+      "stage": "final_boss",
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Wave preview frame for NOT-Iron Monsoon, wave 20/20. storm rain sheets, submarine wakes, lightning accents, visibility-safe bullet color. screen-dominant multi-section final boss with phase pressure and weak-point cues. Ensure downward enemy pressure and player lane at lower screen.",
+      "sourcePromptHash": "f84eeddbf41892af",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "planes-sheet",
+      "file": "planes-sheet.png",
+      "assetType": "sprite_board",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Plane roster board focused on XP-59 Specter and B7 Atlas only, both in top-down combat-ready orientation, with callouts for special moves and hitbox readability.",
+      "sourcePromptHash": "a05303579cc54000",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "player-roll-sprite-sheet",
+      "file": "player-roll-sprite-sheet.png",
+      "assetType": "sprite_sheet",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Animation-ready sprite sheet for barrel-roll dodge frames for Specter and Atlas. Include 6-frame roll progression each, consistent pixel scale, clean atlas layout, top-down fighter orientation.",
+      "sourcePromptHash": "4cc3342a9aa40b67",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": {
+        "layout": "grid",
+        "columns": 6,
+        "rows": 2,
+        "dir": "1942/design/assets/highfi/extracted/player-roll-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/player-roll-sprite-sheet/sheet-meta.json",
+        "frameWidth": 128,
+        "frameHeight": 704,
+        "frames": 12
+      },
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "enemy-sheet",
+      "file": "enemy-sheet.png",
+      "assetType": "compendium",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Enemy compendium board with overhead/top-down enemies only: scout, raider, gunship, bomber, submarine, and mini-boss archetypes. Include movement arrows and projectile-family callouts.",
+      "sourcePromptHash": "9409cd5cb4388116",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "enemy-sprite-sheet",
+      "file": "enemy-sprite-sheet.png",
+      "assetType": "sprite_sheet",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Production sprite atlas with top-down enemy frames and attack states. Include small, medium, large enemy classes with 4 frames each and projectile muzzle frame.",
+      "sourcePromptHash": "41d67e5f3259a6e6",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": {
+        "layout": "grid",
+        "columns": 8,
+        "rows": 4,
+        "dir": "1942/design/assets/highfi/extracted/enemy-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/enemy-sprite-sheet/sheet-meta.json",
+        "frameWidth": 96,
+        "frameHeight": 352,
+        "frames": 32
+      },
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "boss-sprite-sheet",
+      "file": "boss-sprite-sheet.png",
+      "assetType": "sprite_sheet",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Large boss sprite atlas, top-down perspective, multi-section weak points, phase variants, and scale that occupies major screen space like classic bullet-hell bosses.",
+      "sourcePromptHash": "e5cc5ac430303929",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": {
+        "layout": "grid",
+        "columns": 4,
+        "rows": 2,
+        "dir": "1942/design/assets/highfi/extracted/boss-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/boss-sprite-sheet/sheet-meta.json",
+        "frameWidth": 192,
+        "frameHeight": 704,
+        "frames": 8
+      },
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "terrain-wildlife-board",
+      "file": "terrain-wildlife-board.png",
+      "assetType": "behavior",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Terrain and ambience board showing non-interactive wildlife only. Whale surfacing/disappearing loop examples, no seagulls, plus terrain readability overlays for all campaigns.",
+      "sourcePromptHash": "9f0e0d5d1c74ca55",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "powerup-sheet",
+      "file": "powerup-sheet.png",
+      "assetType": "sprite_board",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Power-up board with same pickup silhouette shape for all drops. Show progressive shot upgrade tiers (single, double, triple), speed boost, shield (non-stack), repair (non-stack), bomb pack (stack), passive turret pickup.",
+      "sourcePromptHash": "ad7fb9f40ad0ab93",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "dialogue-comic-bubbles",
+      "file": "dialogue-comic-bubbles.png",
+      "assetType": "behavior",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. High-contrast comic dialogue panels for mission intro, mini-boss alert, final-boss alert, and campaign-clear debrief. Heavy black-and-white styling with minimal accent color.",
+      "sourcePromptHash": "03209a21a77c8397",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "hud-shot",
+      "file": "hud-shot.png",
+      "assetType": "hud",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Single-player in-game combat shot with top HUD only, vertical scrolling direction, large enemy presence, and readable projectile density.",
+      "sourcePromptHash": "a83f99322050c66b",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "enemy-patterns-board",
+      "file": "enemy-patterns-board.png",
+      "assetType": "behavior",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Enemy movement and fire-pattern board: direct burst, cone spread, tracking drift, lane denial mine trail, and crossfire pincer patterns with top-down units.",
+      "sourcePromptHash": "1b62a91445e2ca72",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "boss-phase-board",
+      "file": "boss-phase-board.png",
+      "assetType": "behavior",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Boss phase behavior board with four escalating phases and destructible sections, including projectile examples and phase transition cues in vertical-shooter framing.",
+      "sourcePromptHash": "a3915f2e3b7f3e27",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": null,
+      "model": "grok-imagine-image",
+      "status": "generated"
+    },
+    {
+      "id": "whale-ambient-strip",
+      "file": "whale-ambient-strip.png",
+      "assetType": "sprite_sheet",
+      "campaignId": null,
+      "waveNumber": null,
+      "stage": null,
+      "prompt": "high-fidelity pixel art vertical scrolling shooter frame, top-down or near-top-down gameplay perspective only, single-player HUD with score, lives, bombs, wave in top bar, strong silhouette readability for player, enemies, bullets, pickups, crisp pixel clusters, no blur, no painterly filtering, arcade-final quality, not concept wireframe. Hard constraints: top-down gameplay read, vertical enemy flow, single-player top HUD, bosses much larger than normal enemies. Negative constraints: no side-view ships or side-view planes, no horizontal shooter layout, no split-screen or two-player duplicated HUD, no seagulls, no campaign-board title text in active combat screenshots. Ambient whale 6-frame loop strip: surface, breathe, dive. Non-interactive background element. Pixel-art sprite strip on clean atlas background.",
+      "sourcePromptHash": "2071d5ae7019d64f",
+      "constraints": {
+        "perspective": "top_down_or_near_top_down_only",
+        "flow": "vertical_scrolling_shooter",
+        "hud": "single_player_top_bar",
+        "ambience": "whales_ambient_non_interactive_only",
+        "remove": [
+          "seagulls",
+          "dual_player_hud",
+          "side_view_units"
+        ]
+      },
+      "extraction": {
+        "layout": "grid",
+        "columns": 6,
+        "rows": 1,
+        "dir": "1942/design/assets/highfi/extracted/whale-ambient-strip",
+        "metadata": "1942/design/assets/highfi/extracted/whale-ambient-strip/sheet-meta.json",
+        "frameWidth": 128,
+        "frameHeight": 1408,
+        "frames": 6
+      },
+      "model": "grok-imagine-image",
+      "status": "generated"
+    }
+  ],
+  "extractedAt": "2026-02-25T20:20:56.748Z",
+  "extractions": [
+    {
+      "id": "player-roll-sprite-sheet",
+      "file": "player-roll-sprite-sheet.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/player-roll-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/player-roll-sprite-sheet/sheet-meta.json",
+        "frameWidth": 128,
+        "frameHeight": 704,
+        "frames": 12
+      }
+    },
+    {
+      "id": "enemy-sprite-sheet",
+      "file": "enemy-sprite-sheet.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/enemy-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/enemy-sprite-sheet/sheet-meta.json",
+        "frameWidth": 96,
+        "frameHeight": 352,
+        "frames": 32
+      }
+    },
+    {
+      "id": "boss-sprite-sheet",
+      "file": "boss-sprite-sheet.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/boss-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/boss-sprite-sheet/sheet-meta.json",
+        "frameWidth": 192,
+        "frameHeight": 704,
+        "frames": 8
+      }
+    },
+    {
+      "id": "whale-ambient-strip",
+      "file": "whale-ambient-strip.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/whale-ambient-strip",
+        "metadata": "1942/design/assets/highfi/extracted/whale-ambient-strip/sheet-meta.json",
+        "frameWidth": 128,
+        "frameHeight": 1408,
+        "frames": 6
+      }
+    }
+  ]
+}

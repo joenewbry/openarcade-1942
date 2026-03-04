@@ -1,0 +1,32 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1100' height='620' viewBox='0 0 1100 620'>
+  <rect width='1100' height='620' fill='#101825'/>
+  <text x='36' y='48' fill='#ecf7ff' font-family='monospace' font-size='30'>Terrain and Wildlife Layers</text>
+
+  <rect x='40' y='90' width='500' height='230' fill='#17365a' stroke='#6ea7df'/>
+  <text x='60' y='120' fill='#d8efff' font-family='monospace' font-size='18'>Ocean Layer Set (C1/C4)</text>
+  <rect x='60' y='150' width='160' height='22' fill='#2f6f9e'/>
+  <rect x='240' y='150' width='110' height='18' fill='#4b7e97'/>
+  <rect x='370' y='156' width='140' height='12' fill='#d5bc84'/>
+  <text x='60' y='208' fill='#d8efff' font-family='monospace' font-size='14'>Objects: whales, reefs, islands, subs, lightning poles</text>
+  <text x='60' y='232' fill='#d8efff' font-family='monospace' font-size='14'>Motion: slow parallax downward, occasional lateral drift</text>
+  <text x='60' y='256' fill='#ffe2b8' font-family='monospace' font-size='13'>Gameplay effect: visual richness, readable bullet lane contrast</text>
+
+  <rect x='560' y='90' width='500' height='230' fill='#334a2f' stroke='#8ec97f'/>
+  <text x='580' y='120' fill='#e6ffd8' font-family='monospace' font-size='18'>Jungle Layer Set (C2)</text>
+  <rect x='580' y='150' width='140' height='20' fill='#27492d'/>
+  <rect x='730' y='142' width='120' height='28' fill='#3f6d3b'/>
+  <rect x='860' y='160' width='180' height='12' fill='#6da5c4'/>
+  <text x='580' y='208' fill='#e6ffd8' font-family='monospace' font-size='14'>Objects: canopy clusters, river bands, birds</text>
+  <text x='580' y='232' fill='#e6ffd8' font-family='monospace' font-size='14'>Gameplay effect: partial occlusion for ground tracers</text>
+  <text x='580' y='256' fill='#ffe2b8' font-family='monospace' font-size='13'>Design guardrail: never hide enemy projectiles completely</text>
+
+  <rect x='40' y='350' width='1020' height='230' fill='#5c3e2a' stroke='#d3a86b'/>
+  <text x='60' y='380' fill='#fff0d4' font-family='monospace' font-size='18'>Desert Layer Set (C3)</text>
+  <rect x='60' y='410' width='260' height='20' fill='#b9874f'/>
+  <rect x='330' y='404' width='240' height='26' fill='#d3a86b'/>
+  <rect x='590' y='410' width='170' height='16' fill='#6e5743'/>
+  <rect x='780' y='410' width='230' height='16' fill='#6e5743'/>
+  <text x='60' y='468' fill='#fff0d4' font-family='monospace' font-size='14'>Objects: dunes, convoy vehicles, dust-devil streaks</text>
+  <text x='60' y='492' fill='#fff0d4' font-family='monospace' font-size='14'>Gameplay effect: intermittent visibility pulses from dust haze</text>
+  <text x='60' y='516' fill='#ffe2b8' font-family='monospace' font-size='13'>Color strategy: warm ground + cool bullets for readability.</text>
+</svg>

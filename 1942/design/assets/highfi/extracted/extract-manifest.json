@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-02-25T20:20:56.749Z",
+  "results": [
+    {
+      "id": "player-roll-sprite-sheet",
+      "file": "player-roll-sprite-sheet.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/player-roll-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/player-roll-sprite-sheet/sheet-meta.json",
+        "frameWidth": 128,
+        "frameHeight": 704,
+        "frames": 12
+      }
+    },
+    {
+      "id": "enemy-sprite-sheet",
+      "file": "enemy-sprite-sheet.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/enemy-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/enemy-sprite-sheet/sheet-meta.json",
+        "frameWidth": 96,
+        "frameHeight": 352,
+        "frames": 32
+      }
+    },
+    {
+      "id": "boss-sprite-sheet",
+      "file": "boss-sprite-sheet.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/boss-sprite-sheet",
+        "metadata": "1942/design/assets/highfi/extracted/boss-sprite-sheet/sheet-meta.json",
+        "frameWidth": 192,
+        "frameHeight": 704,
+        "frames": 8
+      }
+    },
+    {
+      "id": "whale-ambient-strip",
+      "file": "whale-ambient-strip.png",
+      "status": "extracted",
+      "extraction": {
+        "dir": "1942/design/assets/highfi/extracted/whale-ambient-strip",
+        "metadata": "1942/design/assets/highfi/extracted/whale-ambient-strip/sheet-meta.json",
+        "frameWidth": 128,
+        "frameHeight": 1408,
+        "frames": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "player-roll-sprite-sheet",
+  "source": "player-roll-sprite-sheet.png",
+  "frameWidth": 128,
+  "frameHeight": 704,
+  "columns": 6,
+  "rows": 2,
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f00.png"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f01.png"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f02.png"
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 3,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f03.png"
+    },
+    {
+      "index": 4,
+      "row": 0,
+      "col": 4,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f04.png"
+    },
+    {
+      "index": 5,
+      "row": 0,
+      "col": 5,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f05.png"
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "col": 0,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f06.png"
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "col": 1,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f07.png"
+    },
+    {
+      "index": 8,
+      "row": 1,
+      "col": 2,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f08.png"
+    },
+    {
+      "index": 9,
+      "row": 1,
+      "col": 3,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f09.png"
+    },
+    {
+      "index": 10,
+      "row": 1,
+      "col": 4,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f10.png"
+    },
+    {
+      "index": 11,
+      "row": 1,
+      "col": 5,
+      "file": "./player-roll-sprite-sheet/player-roll-sprite-sheet-f11.png"
+    }
+  ],
+  "animations": {
+    "specter_roll": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "atlas_roll": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  }
+}

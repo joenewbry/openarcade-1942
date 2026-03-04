@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1100' height='540' viewBox='0 0 1100 540'>
+  <rect width='1100' height='540' fill='#0f1828'/>
+  <text x='40' y='50' fill='#eef7ff' font-family='monospace' font-size='30'>Pacing and Pressure Curve</text>
+
+  <rect x='60' y='90' width='980' height='390' fill='#13233c' stroke='#4f81b7'/>
+  <line x1='100' y1='440' x2='1000' y2='440' stroke='#9bbad8'/>
+  <line x1='100' y1='140' x2='100' y2='440' stroke='#9bbad8'/>
+
+  <polyline fill='none' stroke='#ff8f7a' stroke-width='4' points='100,410 150,398 200,386 250,360 300,332 350,320 400,300 450,272 500,250 550,230 600,214 650,188 700,166 750,152 800,142 850,136 900,128 950,118 1000,110'/>
+
+  <line x1='325' y1='140' x2='325' y2='440' stroke='#ffd27b' stroke-dasharray='8 6'/>
+  <line x1='550' y1='140' x2='550' y2='440' stroke='#ffd27b' stroke-dasharray='8 6'/>
+  <line x1='775' y1='140' x2='775' y2='440' stroke='#ffd27b' stroke-dasharray='8 6'/>
+  <line x1='1000' y1='140' x2='1000' y2='440' stroke='#ff6a8a' stroke-dasharray='10 6'/>
+
+  <text x='300' y='128' fill='#ffe2b8' font-family='monospace' font-size='13'>Mini Boss 1</text>
+  <text x='525' y='128' fill='#ffe2b8' font-family='monospace' font-size='13'>Mini Boss 2</text>
+  <text x='750' y='128' fill='#ffe2b8' font-family='monospace' font-size='13'>Mini Boss 3</text>
+  <text x='934' y='128' fill='#ffbfd1' font-family='monospace' font-size='13'>Final Boss</text>
+
+  <text x='120' y='468' fill='#d3e8ff' font-family='monospace' font-size='13'>Wave 1</text>
+  <text x='935' y='468' fill='#d3e8ff' font-family='monospace' font-size='13'>Wave 20</text>
+  <text x='70' y='158' fill='#d3e8ff' font-family='monospace' font-size='13'>High</text>
+  <text x='72' y='430' fill='#d3e8ff' font-family='monospace' font-size='13'>Low</text>
+
+  <text x='100' y='500' fill='#d3e8ff' font-family='monospace' font-size='14'>Pressure formula: enemy count + projectile density + terrain hazard overlap + visibility penalty.</text>
+</svg>

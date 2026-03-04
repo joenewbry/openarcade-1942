@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1942 Pixel Campaigns Unified Design Doc</title>
+<style>
+:root{--bg:#0a1120;--panel:#101c33;--line:#284b78;--text:#e6f2ff;--muted:#b7d0ea;--accent:#7ec7ff;--code:#0b1628}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#162846,var(--bg) 52%);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+.shell{max-width:1320px;margin:0 auto;padding:20px;display:grid;grid-template-columns:290px 1fr;gap:14px}
+@media(max-width:980px){.shell{grid-template-columns:1fr}.toc{position:static}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.toc{padding:14px;position:sticky;top:14px;max-height:calc(100vh - 28px);overflow:auto}
+.toc h3{margin:0 0 8px;font-size:14px;color:var(--accent)}
+.toc a{display:block;color:var(--muted);text-decoration:none;padding:5px 6px;border-radius:6px;font-size:13px}
+.toc a:hover{background:#173159;color:#ecf7ff}
+.toc .toc-l1{font-weight:700;color:#eaf4ff;margin-top:6px}
+.toc .toc-l2{padding-left:14px}
+.toc .toc-l3{padding-left:28px;font-size:12px}
+.main{padding:20px 24px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.toolbar a{display:inline-block;background:#132542;border:1px solid #2a4f7f;color:#e8f4ff;text-decoration:none;border-radius:8px;padding:8px 12px;font-size:13px}
+.header{margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.header h1{margin:0;font-size:30px}.header p{margin:6px 0 0;color:var(--muted)}
+.header .meta{margin-top:10px;font-size:12px;color:var(--muted)}
+h1,h2,h3,h4,h5,h6{color:#eaf4ff;scroll-margin-top:18px}
+h2{border-bottom:1px solid #234265;padding-bottom:6px;margin-top:30px}
+p,li{color:#d4e6f9;line-height:1.65}a{color:#9ed5ff}
+code{background:#1a2f4d;color:#eaf4ff;padding:1px 5px;border-radius:5px;font-size:.92em}
+pre{background:var(--code);border:1px solid #223e63;border-radius:10px;padding:12px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:10px;border:1px solid #2e5788;background:#132540}
+figure{margin:16px 0}figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+table{width:100%;border-collapse:collapse;margin:14px 0}th,td{border:1px solid #274870;padding:8px;text-align:left}th{background:#162b47}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="panel toc"><h3>Contents</h3><a class="toc-l1" href="#1942-pixel-campaigns-unified-design-doc">1942 Pixel Campaigns Unified Design Doc</a><a class="toc-l2" href="#quick-navigation">Quick Navigation</a><a class="toc-l2" href="#book">Book</a><a class="toc-l3" href="#vision">Vision</a><a class="toc-l3" href="#core-systems">Core Systems</a><a class="toc-l3" href="#campaign-boards">Campaign Boards</a><a class="toc-l3" href="#plane-roster-and-roll-dodge">Plane Roster and Roll Dodge</a><a class="toc-l3" href="#weapons-and-upgrade-rules">Weapons and Upgrade Rules</a><a class="toc-l3" href="#enemy-and-boss-visual-direction">Enemy and Boss Visual Direction</a><a class="toc-l3" href="#terrain-and-ambient-wildlife">Terrain and Ambient Wildlife</a><a class="toc-l3" href="#power-ups-and-readability">Power-Ups and Readability</a><a class="toc-l3" href="#dialogue-style">Dialogue Style</a><a class="toc-l3" href="#competitive-inspiration">Competitive Inspiration</a><a class="toc-l2" href="#mechanics">Mechanics</a><a class="toc-l3" href="#campaign-and-wave-cadence">Campaign and Wave Cadence</a><a class="toc-l3" href="#enemy-types-and-projectile-families">Enemy Types and Projectile Families</a><a class="toc-l3" href="#boss-phase-model">Boss Phase Model</a><a class="toc-l3" href="#campaign-by-campaign-progression">Campaign-by-Campaign Progression</a><a class="toc-l3" href="#upgrade-drop-scaling">Upgrade Drop Scaling</a><a class="toc-l2" href="#wave-by-wave-visual-review">Wave-by-Wave Visual Review</a><a class="toc-l3" href="#campaign-1-not-coral-front">Campaign 1: NOT-Coral Front</a><a class="toc-l3" href="#campaign-2-not-jungle-spear">Campaign 2: NOT-Jungle Spear</a><a class="toc-l3" href="#campaign-3-not-dust-convoy">Campaign 3: NOT-Dust Convoy</a><a class="toc-l3" href="#campaign-4-not-iron-monsoon">Campaign 4: NOT-Iron Monsoon</a><a class="toc-l2" href="#asset-gallery">Asset Gallery</a><a class="toc-l2" href="#ai-art-pipeline">AI Art Pipeline</a><a class="toc-l2" href="#implementation-checklist">Implementation Checklist</a></aside>
+<main class="panel main">
+<div class="toolbar">
+  <a href="/">Back to Arcade</a>
+  <a href="/1942/">Play 1942</a>
+  <a href="#book">Open Book</a>
+  <a href="#mechanics">Open Mechanics</a>
+  <a href="./assets/highfi/art-manifest.json">Open Art Manifest</a>
+</div>
+<div class="header"><h1>1942 Pixel Campaigns Unified Design Doc</h1><p>Single-source markdown rendered to one HTML review surface for book + mechanics + production assets.</p><div class="meta">Source: <a href="1942-design.md">1942-design.md</a></div></div>
+<h1 id="1942-pixel-campaigns-unified-design-doc">1942 Pixel Campaigns Unified Design Doc</h1>
+<h2 id="quick-navigation">Quick Navigation</h2>
+<ul><li><a href="#book">Book</a></li><li><a href="#mechanics">Mechanics</a></li><li><a href="#wave-by-wave-visual-review">Wave-by-Wave Visual Review</a></li><li><a href="#asset-gallery">Asset Gallery</a></li><li><a href="#ai-art-pipeline">AI Art Pipeline</a></li></ul>
+<h2 id="book">Book</h2>
+<h3 id="vision">Vision</h3>
+<p><code>1942</code> is being rewritten as a high-fidelity pixel vertical shooter. This markdown is the single source for design, mechanics, pacing, and visual production review.</p>
+<p>Goals:</p>
+<ul><li>One canonical markdown file rendered into one browseable HTML page.</li><li>All imagery follows top-down vertical shooter readability.</li><li>Final-quality pixel look for planes, enemies, bosses, power-ups, terrain, and dialogue.</li><li>Wave-by-wave previews so campaign pacing can be reviewed without playing.</li></ul>
+<h3 id="core-systems">Core Systems</h3>
+<ul><li>4 campaigns, 20 waves each.</li><li>Waves 5/10/15: mini bosses.</li><li>Wave 20: final boss.</li><li>Inputs: <code>Space</code> fire, <code>X</code> special, <code>Shift</code> or double-<code>Space</code> roll, <code>B</code> bomb clear.</li><li>HUD is single-player and top-aligned (<code>Score</code>, <code>Lives</code>, <code>Bombs</code>, <code>Wave</code>).</li></ul>
+<h3 id="campaign-boards">Campaign Boards</h3>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/campaign-coral.png" alt="Campaign Board: Coral Front"><figcaption>Campaign Board: Coral Front</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/campaign-jungle.png" alt="Campaign Board: Jungle Spear"><figcaption>Campaign Board: Jungle Spear</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/campaign-dust.png" alt="Campaign Board: Dust Convoy"><figcaption>Campaign Board: Dust Convoy</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/campaign-monsoon.png" alt="Campaign Board: Iron Monsoon"><figcaption>Campaign Board: Iron Monsoon</figcaption></figure>
+<h3 id="plane-roster-and-roll-dodge">Plane Roster and Roll Dodge</h3>
+<p>Plane focus for this phase:</p>
+<ul><li><code>XP-59 Specter</code> special: <code>Phase Shield</code>.</li><li><code>B7 Atlas</code> special: <code>EMP Wave</code>.</li></ul>
+<p>Roll dodge requirements:</p>
+<ul><li>Sprite-driven roll sequence (not a single static tilt panel).</li><li>Shared timing literacy and movement displacement.</li><li>I-frame window shorter than the full roll animation.</li></ul>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/planes-sheet.png" alt="Plane Roster (Specter + Atlas)"><figcaption>Plane Roster (Specter + Atlas)</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/player-roll-sprite-sheet.png" alt="Player Roll Sprite Sheet"><figcaption>Player Roll Sprite Sheet</figcaption></figure>
+<h3 id="weapons-and-upgrade-rules">Weapons and Upgrade Rules</h3>
+<p>Primary weapons:</p>
+<ul><li>Base fire starts as single shot.</li><li>Shot upgrade is progressive and stacks by tier: <code>Single -&gt; Double -&gt; Triple</code>.</li><li>Speed boost modifies movement and evade spacing.</li></ul>
+<p>Special and utility:</p>
+<ul><li><code>Shield</code> does not stack.</li><li><code>Repair</code> does not stack.</li><li><code>Bomb Pack</code> stacks and powers board clear.</li><li><code>Passive Turret</code> pickup grants automated support fire.</li></ul>
+<p>Bomb clear behavior:</p>
+<ul><li>Clears active enemy bullets.</li><li>Deals heavy board-wide damage.</li><li>Consumes one bomb stock.</li></ul>
+<h3 id="enemy-and-boss-visual-direction">Enemy and Boss Visual Direction</h3>
+<p>Enemy classes:</p>
+<ul><li>Small: fast injectors.</li><li>Medium: pattern drivers.</li><li>Large: anchor threats.</li><li>Boss: screen-dominant multi-section threats.</li></ul>
+<p>Boss structure:</p>
+<ul><li>Distinct destructible sections.</li><li>Phase escalation by HP breakpoints.</li><li>Increasing projectile complexity and lane pressure.</li></ul>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/enemy-sheet.png" alt="Enemy Compendium Board"><figcaption>Enemy Compendium Board</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/enemy-sprite-sheet.png" alt="Enemy Sprite Sheet"><figcaption>Enemy Sprite Sheet</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/boss-sprite-sheet.png" alt="Boss Sprite Sheet"><figcaption>Boss Sprite Sheet</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/enemy-patterns-board.png" alt="Enemy Movement + Fire Patterns"><figcaption>Enemy Movement + Fire Patterns</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/boss-phase-board.png" alt="Boss Phase Behavior Board"><figcaption>Boss Phase Behavior Board</figcaption></figure>
+<h3 id="terrain-and-ambient-wildlife">Terrain and Ambient Wildlife</h3>
+<ul><li>Wildlife is non-interactive ambience only.</li><li>Whales may surface and disappear as visual flavor.</li><li>Seagulls are removed.</li></ul>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/terrain-wildlife-board.png" alt="Terrain and Wildlife Board"><figcaption>Terrain and Wildlife Board</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/whale-ambient-strip.png" alt="Whale Ambient Strip"><figcaption>Whale Ambient Strip</figcaption></figure>
+<h3 id="power-ups-and-readability">Power-Ups and Readability</h3>
+<ul><li>All pickups use a consistent silhouette family.</li><li>Drop readability is protected against terrain color noise.</li><li>Late waves increase drop frequency through scaling multipliers.</li></ul>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/powerup-sheet.png" alt="Power-Up Board"><figcaption>Power-Up Board</figcaption></figure>
+<h3 id="dialogue-style">Dialogue Style</h3>
+<p>Dialogue is comic-style high-contrast black/white with minimal accent color.</p>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/dialogue-comic-bubbles.png" alt="Dialogue Comic Board"><figcaption>Dialogue Comic Board</figcaption></figure>
+<h3 id="competitive-inspiration">Competitive Inspiration</h3>
+<ul><li><code>1942</code></li><li><code>Raiden</code></li><li><code>Strikers 1945</code></li><li><code>DoDonPachi</code></li><li><code>Xevious</code></li></ul>
+<p>Applied takeaways:</p>
+<ul><li>Strong HUD clarity under bullet density.</li><li>Top-down readability and silhouette control.</li><li>Large, screen-filling bosses with phase identity.</li></ul>
+<figure><img loading="lazy" decoding="async" src="./assets/comp-1942.png" alt="1942 Reference"><figcaption>1942 Reference</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/comp-raiden.png" alt="Raiden Reference"><figcaption>Raiden Reference</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/comp-strikers-1945.png" alt="Strikers 1945 Reference"><figcaption>Strikers 1945 Reference</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/comp-dodonpachi.png" alt="DoDonPachi Reference"><figcaption>DoDonPachi Reference</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/comp-xevious.png" alt="Xevious Reference"><figcaption>Xevious Reference</figcaption></figure>
+<h2 id="mechanics">Mechanics</h2>
+<h3 id="campaign-and-wave-cadence">Campaign and Wave Cadence</h3>
+<ul><li>Campaign count: 4.</li><li>Waves per campaign: 20.</li></ul>
+<table><thead><tr><th>Wave Range</th><th>Role</th></tr></thead><tbody><tr><td><code>1-4</code></td><td>onboarding and clean lanes</td></tr><tr><td><code>5</code></td><td>mini boss 1</td></tr><tr><td><code>6-9</code></td><td>mixed pressure</td></tr><tr><td><code>10</code></td><td>mini boss 2</td></tr><tr><td><code>11-14</code></td><td>terrain + pressure blend</td></tr><tr><td><code>15</code></td><td>mini boss 3</td></tr><tr><td><code>16-19</code></td><td>high-density pressure</td></tr><tr><td><code>20</code></td><td>final boss</td></tr></tbody></table>
+<h3 id="enemy-types-and-projectile-families">Enemy Types and Projectile Families</h3>
+<table><thead><tr><th>Family</th><th>Movement</th><th>Primary Fire</th><th>Secondary Fire</th><th>Role</th></tr></thead><tbody><tr><td><code>scout_zero</code></td><td>quick dive lanes</td><td>narrow burst</td><td>snap aimed shot</td><td>early pressure</td></tr><tr><td><code>torpedo_gull</code></td><td>low sweep</td><td>low arc spread</td><td>lane bomb drop</td><td>low-alt disruption</td></tr><tr><td><code>canopy_raider</code></td><td>flank weave</td><td>angled crossfire</td><td>side pincer burst</td><td>flank opener</td></tr><tr><td><code>gunship_hornet</code></td><td>slow anchor drift</td><td>sustained stream</td><td>delayed bloom burst</td><td>zone denial</td></tr><tr><td><code>dune_lancer</code></td><td>high-speed line dash</td><td>straight lance shot</td><td>dash tracer line</td><td>intercept</td></tr><tr><td><code>rail_bomber</code></td><td>staggered lane hold</td><td>heavy volley</td><td>rear mine trail</td><td>attrition</td></tr><tr><td><code>storm_wraith</code></td><td>pulse oscillation</td><td>pulse ring</td><td>tracking drift rounds</td><td>visibility stress</td></tr><tr><td><code>sub_spear</code></td><td>surfacing pop-in</td><td>torpedo fan</td><td>wake mines</td><td>low-lane control</td></tr></tbody></table>
+<h3 id="boss-phase-model">Boss Phase Model</h3>
+<p>Each final boss has four core sections: <code>port battery</code>, <code>starboard battery</code>, <code>engine</code>, <code>core</code>.</p>
+<ol><li><code>Phase 1</code>: spread baseline and movement literacy.</li><li><code>Phase 2</code>: aimed bursts + crossfire.</li><li><code>Phase 3</code>: tracking rounds + lane denial.</li><li><code>Phase 4</code>: combined patterns with short recovery windows.</li></ol>
+<h3 id="campaign-by-campaign-progression">Campaign-by-Campaign Progression</h3>
+<h4 id="campaign-1-not-coral-front">Campaign 1: NOT-Coral Front</h4>
+<ul><li>Intro: <code>scout_zero</code>.</li><li>Added pressure: <code>torpedo_gull</code>.</li><li>Mini bosses: <code>reef_guardian</code> on W5/W10/W15.</li><li>Final boss: <code>coral_dreadnought</code> on W20.</li><li>Terrain: reefs + island channels + ambient whales.</li></ul>
+<h4 id="campaign-2-not-jungle-spear">Campaign 2: NOT-Jungle Spear</h4>
+<ul><li>Intro: <code>canopy_raider</code>.</li><li>Added pressure: <code>gunship_hornet</code>.</li><li>Legacy remix: <code>scout_zero</code> ambush packs.</li><li>Mini bosses: <code>river_bastion</code> on W5/W10/W15.</li><li>Final boss: <code>jungle_citadel</code> on W20.</li></ul>
+<h4 id="campaign-3-not-dust-convoy">Campaign 3: NOT-Dust Convoy</h4>
+<ul><li>Intro: <code>dune_lancer</code>.</li><li>Added pressure: <code>rail_bomber</code>.</li><li>Legacy remix: <code>gunship_hornet</code> overlay waves.</li><li>Mini bosses: <code>convoy_ram</code> on W5/W10/W15.</li><li>Final boss: <code>dust_colossus</code> on W20.</li></ul>
+<h4 id="campaign-4-not-iron-monsoon">Campaign 4: NOT-Iron Monsoon</h4>
+<ul><li>Intro: <code>storm_wraith</code>.</li><li>Added pressure: <code>sub_spear</code>.</li><li>Legacy remix: <code>dune_lancer</code> + <code>canopy_raider</code> late waves.</li><li>Mini bosses: <code>monsoon_blade</code> on W5/W10/W15.</li><li>Final boss: <code>iron_tempest</code> on W20.</li></ul>
+<h3 id="upgrade-drop-scaling">Upgrade Drop Scaling</h3>
+<table><thead><tr><th>Context</th><th>Base Chance</th><th>Progression Multiplier</th><th>Guaranteed</th></tr></thead><tbody><tr><td>Small enemy</td><td>10%</td><td>+0.4% per wave after W8</td><td>No</td></tr><tr><td>Medium enemy</td><td>14%</td><td>+0.5% per wave after W8</td><td>No</td></tr><tr><td>Large enemy</td><td>20%</td><td>+0.7% per wave after W8</td><td>No</td></tr><tr><td>Mini boss</td><td>100%</td><td>n/a</td><td>Yes</td></tr><tr><td>Final boss</td><td>100% major drop</td><td>n/a</td><td>Yes</td></tr></tbody></table>
+<h2 id="wave-by-wave-visual-review">Wave-by-Wave Visual Review</h2>
+<p>Each wave preview is generated to match vertical-shooter composition, top HUD layout, and campaign-specific readability constraints.</p>
+<h3 id="campaign-1-not-coral-front">Campaign 1: NOT-Coral Front</h3>
+<h4 id="c1-wave-1">C1 Wave 1</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w01.png" alt="C1 Wave 1 Preview"><figcaption>C1 Wave 1 Preview</figcaption></figure>
+<h4 id="c1-wave-2">C1 Wave 2</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w02.png" alt="C1 Wave 2 Preview"><figcaption>C1 Wave 2 Preview</figcaption></figure>
+<h4 id="c1-wave-3">C1 Wave 3</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w03.png" alt="C1 Wave 3 Preview"><figcaption>C1 Wave 3 Preview</figcaption></figure>
+<h4 id="c1-wave-4">C1 Wave 4</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w04.png" alt="C1 Wave 4 Preview"><figcaption>C1 Wave 4 Preview</figcaption></figure>
+<h4 id="c1-wave-5">C1 Wave 5</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w05.png" alt="C1 Wave 5 Preview"><figcaption>C1 Wave 5 Preview</figcaption></figure>
+<h4 id="c1-wave-6">C1 Wave 6</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w06.png" alt="C1 Wave 6 Preview"><figcaption>C1 Wave 6 Preview</figcaption></figure>
+<h4 id="c1-wave-7">C1 Wave 7</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w07.png" alt="C1 Wave 7 Preview"><figcaption>C1 Wave 7 Preview</figcaption></figure>
+<h4 id="c1-wave-8">C1 Wave 8</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w08.png" alt="C1 Wave 8 Preview"><figcaption>C1 Wave 8 Preview</figcaption></figure>
+<h4 id="c1-wave-9">C1 Wave 9</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w09.png" alt="C1 Wave 9 Preview"><figcaption>C1 Wave 9 Preview</figcaption></figure>
+<h4 id="c1-wave-10">C1 Wave 10</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w10.png" alt="C1 Wave 10 Preview"><figcaption>C1 Wave 10 Preview</figcaption></figure>
+<h4 id="c1-wave-11">C1 Wave 11</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w11.png" alt="C1 Wave 11 Preview"><figcaption>C1 Wave 11 Preview</figcaption></figure>
+<h4 id="c1-wave-12">C1 Wave 12</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w12.png" alt="C1 Wave 12 Preview"><figcaption>C1 Wave 12 Preview</figcaption></figure>
+<h4 id="c1-wave-13">C1 Wave 13</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w13.png" alt="C1 Wave 13 Preview"><figcaption>C1 Wave 13 Preview</figcaption></figure>
+<h4 id="c1-wave-14">C1 Wave 14</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w14.png" alt="C1 Wave 14 Preview"><figcaption>C1 Wave 14 Preview</figcaption></figure>
+<h4 id="c1-wave-15">C1 Wave 15</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w15.png" alt="C1 Wave 15 Preview"><figcaption>C1 Wave 15 Preview</figcaption></figure>
+<h4 id="c1-wave-16">C1 Wave 16</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w16.png" alt="C1 Wave 16 Preview"><figcaption>C1 Wave 16 Preview</figcaption></figure>
+<h4 id="c1-wave-17">C1 Wave 17</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w17.png" alt="C1 Wave 17 Preview"><figcaption>C1 Wave 17 Preview</figcaption></figure>
+<h4 id="c1-wave-18">C1 Wave 18</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w18.png" alt="C1 Wave 18 Preview"><figcaption>C1 Wave 18 Preview</figcaption></figure>
+<h4 id="c1-wave-19">C1 Wave 19</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w19.png" alt="C1 Wave 19 Preview"><figcaption>C1 Wave 19 Preview</figcaption></figure>
+<h4 id="c1-wave-20">C1 Wave 20</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c1-w20.png" alt="C1 Wave 20 Preview"><figcaption>C1 Wave 20 Preview</figcaption></figure>
+<h3 id="campaign-2-not-jungle-spear">Campaign 2: NOT-Jungle Spear</h3>
+<h4 id="c2-wave-1">C2 Wave 1</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w01.png" alt="C2 Wave 1 Preview"><figcaption>C2 Wave 1 Preview</figcaption></figure>
+<h4 id="c2-wave-2">C2 Wave 2</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w02.png" alt="C2 Wave 2 Preview"><figcaption>C2 Wave 2 Preview</figcaption></figure>
+<h4 id="c2-wave-3">C2 Wave 3</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w03.png" alt="C2 Wave 3 Preview"><figcaption>C2 Wave 3 Preview</figcaption></figure>
+<h4 id="c2-wave-4">C2 Wave 4</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w04.png" alt="C2 Wave 4 Preview"><figcaption>C2 Wave 4 Preview</figcaption></figure>
+<h4 id="c2-wave-5">C2 Wave 5</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w05.png" alt="C2 Wave 5 Preview"><figcaption>C2 Wave 5 Preview</figcaption></figure>
+<h4 id="c2-wave-6">C2 Wave 6</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w06.png" alt="C2 Wave 6 Preview"><figcaption>C2 Wave 6 Preview</figcaption></figure>
+<h4 id="c2-wave-7">C2 Wave 7</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w07.png" alt="C2 Wave 7 Preview"><figcaption>C2 Wave 7 Preview</figcaption></figure>
+<h4 id="c2-wave-8">C2 Wave 8</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w08.png" alt="C2 Wave 8 Preview"><figcaption>C2 Wave 8 Preview</figcaption></figure>
+<h4 id="c2-wave-9">C2 Wave 9</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w09.png" alt="C2 Wave 9 Preview"><figcaption>C2 Wave 9 Preview</figcaption></figure>
+<h4 id="c2-wave-10">C2 Wave 10</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w10.png" alt="C2 Wave 10 Preview"><figcaption>C2 Wave 10 Preview</figcaption></figure>
+<h4 id="c2-wave-11">C2 Wave 11</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w11.png" alt="C2 Wave 11 Preview"><figcaption>C2 Wave 11 Preview</figcaption></figure>
+<h4 id="c2-wave-12">C2 Wave 12</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w12.png" alt="C2 Wave 12 Preview"><figcaption>C2 Wave 12 Preview</figcaption></figure>
+<h4 id="c2-wave-13">C2 Wave 13</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w13.png" alt="C2 Wave 13 Preview"><figcaption>C2 Wave 13 Preview</figcaption></figure>
+<h4 id="c2-wave-14">C2 Wave 14</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w14.png" alt="C2 Wave 14 Preview"><figcaption>C2 Wave 14 Preview</figcaption></figure>
+<h4 id="c2-wave-15">C2 Wave 15</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w15.png" alt="C2 Wave 15 Preview"><figcaption>C2 Wave 15 Preview</figcaption></figure>
+<h4 id="c2-wave-16">C2 Wave 16</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w16.png" alt="C2 Wave 16 Preview"><figcaption>C2 Wave 16 Preview</figcaption></figure>
+<h4 id="c2-wave-17">C2 Wave 17</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w17.png" alt="C2 Wave 17 Preview"><figcaption>C2 Wave 17 Preview</figcaption></figure>
+<h4 id="c2-wave-18">C2 Wave 18</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w18.png" alt="C2 Wave 18 Preview"><figcaption>C2 Wave 18 Preview</figcaption></figure>
+<h4 id="c2-wave-19">C2 Wave 19</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w19.png" alt="C2 Wave 19 Preview"><figcaption>C2 Wave 19 Preview</figcaption></figure>
+<h4 id="c2-wave-20">C2 Wave 20</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c2-w20.png" alt="C2 Wave 20 Preview"><figcaption>C2 Wave 20 Preview</figcaption></figure>
+<h3 id="campaign-3-not-dust-convoy">Campaign 3: NOT-Dust Convoy</h3>
+<h4 id="c3-wave-1">C3 Wave 1</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w01.png" alt="C3 Wave 1 Preview"><figcaption>C3 Wave 1 Preview</figcaption></figure>
+<h4 id="c3-wave-2">C3 Wave 2</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w02.png" alt="C3 Wave 2 Preview"><figcaption>C3 Wave 2 Preview</figcaption></figure>
+<h4 id="c3-wave-3">C3 Wave 3</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w03.png" alt="C3 Wave 3 Preview"><figcaption>C3 Wave 3 Preview</figcaption></figure>
+<h4 id="c3-wave-4">C3 Wave 4</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w04.png" alt="C3 Wave 4 Preview"><figcaption>C3 Wave 4 Preview</figcaption></figure>
+<h4 id="c3-wave-5">C3 Wave 5</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w05.png" alt="C3 Wave 5 Preview"><figcaption>C3 Wave 5 Preview</figcaption></figure>
+<h4 id="c3-wave-6">C3 Wave 6</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w06.png" alt="C3 Wave 6 Preview"><figcaption>C3 Wave 6 Preview</figcaption></figure>
+<h4 id="c3-wave-7">C3 Wave 7</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w07.png" alt="C3 Wave 7 Preview"><figcaption>C3 Wave 7 Preview</figcaption></figure>
+<h4 id="c3-wave-8">C3 Wave 8</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w08.png" alt="C3 Wave 8 Preview"><figcaption>C3 Wave 8 Preview</figcaption></figure>
+<h4 id="c3-wave-9">C3 Wave 9</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w09.png" alt="C3 Wave 9 Preview"><figcaption>C3 Wave 9 Preview</figcaption></figure>
+<h4 id="c3-wave-10">C3 Wave 10</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w10.png" alt="C3 Wave 10 Preview"><figcaption>C3 Wave 10 Preview</figcaption></figure>
+<h4 id="c3-wave-11">C3 Wave 11</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w11.png" alt="C3 Wave 11 Preview"><figcaption>C3 Wave 11 Preview</figcaption></figure>
+<h4 id="c3-wave-12">C3 Wave 12</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w12.png" alt="C3 Wave 12 Preview"><figcaption>C3 Wave 12 Preview</figcaption></figure>
+<h4 id="c3-wave-13">C3 Wave 13</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w13.png" alt="C3 Wave 13 Preview"><figcaption>C3 Wave 13 Preview</figcaption></figure>
+<h4 id="c3-wave-14">C3 Wave 14</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w14.png" alt="C3 Wave 14 Preview"><figcaption>C3 Wave 14 Preview</figcaption></figure>
+<h4 id="c3-wave-15">C3 Wave 15</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w15.png" alt="C3 Wave 15 Preview"><figcaption>C3 Wave 15 Preview</figcaption></figure>
+<h4 id="c3-wave-16">C3 Wave 16</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w16.png" alt="C3 Wave 16 Preview"><figcaption>C3 Wave 16 Preview</figcaption></figure>
+<h4 id="c3-wave-17">C3 Wave 17</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w17.png" alt="C3 Wave 17 Preview"><figcaption>C3 Wave 17 Preview</figcaption></figure>
+<h4 id="c3-wave-18">C3 Wave 18</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w18.png" alt="C3 Wave 18 Preview"><figcaption>C3 Wave 18 Preview</figcaption></figure>
+<h4 id="c3-wave-19">C3 Wave 19</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w19.png" alt="C3 Wave 19 Preview"><figcaption>C3 Wave 19 Preview</figcaption></figure>
+<h4 id="c3-wave-20">C3 Wave 20</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c3-w20.png" alt="C3 Wave 20 Preview"><figcaption>C3 Wave 20 Preview</figcaption></figure>
+<h3 id="campaign-4-not-iron-monsoon">Campaign 4: NOT-Iron Monsoon</h3>
+<h4 id="c4-wave-1">C4 Wave 1</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w01.png" alt="C4 Wave 1 Preview"><figcaption>C4 Wave 1 Preview</figcaption></figure>
+<h4 id="c4-wave-2">C4 Wave 2</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w02.png" alt="C4 Wave 2 Preview"><figcaption>C4 Wave 2 Preview</figcaption></figure>
+<h4 id="c4-wave-3">C4 Wave 3</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w03.png" alt="C4 Wave 3 Preview"><figcaption>C4 Wave 3 Preview</figcaption></figure>
+<h4 id="c4-wave-4">C4 Wave 4</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w04.png" alt="C4 Wave 4 Preview"><figcaption>C4 Wave 4 Preview</figcaption></figure>
+<h4 id="c4-wave-5">C4 Wave 5</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w05.png" alt="C4 Wave 5 Preview"><figcaption>C4 Wave 5 Preview</figcaption></figure>
+<h4 id="c4-wave-6">C4 Wave 6</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w06.png" alt="C4 Wave 6 Preview"><figcaption>C4 Wave 6 Preview</figcaption></figure>
+<h4 id="c4-wave-7">C4 Wave 7</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w07.png" alt="C4 Wave 7 Preview"><figcaption>C4 Wave 7 Preview</figcaption></figure>
+<h4 id="c4-wave-8">C4 Wave 8</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w08.png" alt="C4 Wave 8 Preview"><figcaption>C4 Wave 8 Preview</figcaption></figure>
+<h4 id="c4-wave-9">C4 Wave 9</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w09.png" alt="C4 Wave 9 Preview"><figcaption>C4 Wave 9 Preview</figcaption></figure>
+<h4 id="c4-wave-10">C4 Wave 10</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w10.png" alt="C4 Wave 10 Preview"><figcaption>C4 Wave 10 Preview</figcaption></figure>
+<h4 id="c4-wave-11">C4 Wave 11</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w11.png" alt="C4 Wave 11 Preview"><figcaption>C4 Wave 11 Preview</figcaption></figure>
+<h4 id="c4-wave-12">C4 Wave 12</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w12.png" alt="C4 Wave 12 Preview"><figcaption>C4 Wave 12 Preview</figcaption></figure>
+<h4 id="c4-wave-13">C4 Wave 13</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w13.png" alt="C4 Wave 13 Preview"><figcaption>C4 Wave 13 Preview</figcaption></figure>
+<h4 id="c4-wave-14">C4 Wave 14</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w14.png" alt="C4 Wave 14 Preview"><figcaption>C4 Wave 14 Preview</figcaption></figure>
+<h4 id="c4-wave-15">C4 Wave 15</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w15.png" alt="C4 Wave 15 Preview"><figcaption>C4 Wave 15 Preview</figcaption></figure>
+<h4 id="c4-wave-16">C4 Wave 16</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w16.png" alt="C4 Wave 16 Preview"><figcaption>C4 Wave 16 Preview</figcaption></figure>
+<h4 id="c4-wave-17">C4 Wave 17</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w17.png" alt="C4 Wave 17 Preview"><figcaption>C4 Wave 17 Preview</figcaption></figure>
+<h4 id="c4-wave-18">C4 Wave 18</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w18.png" alt="C4 Wave 18 Preview"><figcaption>C4 Wave 18 Preview</figcaption></figure>
+<h4 id="c4-wave-19">C4 Wave 19</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w19.png" alt="C4 Wave 19 Preview"><figcaption>C4 Wave 19 Preview</figcaption></figure>
+<h4 id="c4-wave-20">C4 Wave 20</h4>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/wave-c4-w20.png" alt="C4 Wave 20 Preview"><figcaption>C4 Wave 20 Preview</figcaption></figure>
+<h2 id="asset-gallery">Asset Gallery</h2>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/hud-shot.png" alt="HUD Combat Mock"><figcaption>HUD Combat Mock</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/powerup-sheet.png" alt="Power-Up Board"><figcaption>Power-Up Board</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/enemy-sheet.png" alt="Enemy Compendium Board"><figcaption>Enemy Compendium Board</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/enemy-patterns-board.png" alt="Enemy Patterns Board"><figcaption>Enemy Patterns Board</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/boss-phase-board.png" alt="Boss Phase Behavior Board"><figcaption>Boss Phase Behavior Board</figcaption></figure>
+<figure><img loading="lazy" decoding="async" src="./assets/highfi/whale-ambient-strip.png" alt="Whale Ambient Strip"><figcaption>Whale Ambient Strip</figcaption></figure>
+<h2 id="ai-art-pipeline">AI Art Pipeline</h2>
+<ul><li>Source model: <code>grok-imagine-image</code>.</li><li>Art script: <code>scripts/generate-1942-art.mjs</code>.</li><li>Extraction script: <code>scripts/extract-1942-sprites.mjs</code>.</li><li>Output folder: <code>1942/design/assets/highfi/</code>.</li><li>Manifest: <code>1942/design/assets/highfi/art-manifest.json</code>.</li><li>Extraction manifest: <code>1942/design/assets/highfi/extracted/extract-manifest.json</code>.</li></ul>
+<p>Expected generated assets:</p>
+<ul><li>4 campaign boards.</li><li>80 wave previews.</li><li>Plane sheet (Specter + Atlas).</li><li>Player roll sprite sheet.</li><li>Enemy compendium and enemy sprite sheet.</li><li>Boss sprite sheet and boss behavior board.</li><li>Power-up board with progressive shot tiers and passive turret.</li><li>Terrain board and whale ambient strip.</li><li>Dialogue comic board.</li></ul>
+<h2 id="implementation-checklist">Implementation Checklist</h2>
+<ul><li>[x] Single canonical markdown source.</li><li>[x] Unified HTML render target.</li><li>[x] Top-down/vertical composition constraints in generator prompts.</li><li>[x] Two-plane focus (<code>Specter</code>, <code>Atlas</code>).</li><li>[x] 80-wave visual review section.</li><li>[x] Sprite extraction pipeline and metadata.</li><li>[x] Updated upgrade/drop mechanics documented.</li></ul>
+</main>
+</div>
+</body>
+</html>

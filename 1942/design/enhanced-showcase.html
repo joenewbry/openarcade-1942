@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1942 Enhanced Tile & Shadow Showcase</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #0a0f1e;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #66ddff;
+            text-shadow: 0 0 10px #66ddff;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #334455;
+            border-radius: 8px;
+            background: rgba(16, 24, 40, 0.8);
+        }
+        h2 {
+            color: #88ffaa;
+            border-bottom: 2px solid #334455;
+            padding-bottom: 10px;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .tile-demo {
+            border: 1px solid #445566;
+            padding: 15px;
+            border-radius: 4px;
+            background: #1a2332;
+        }
+        .tile-preview {
+            width: 64px;
+            height: 64px;
+            border: 2px solid #556677;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+            background: linear-gradient(45deg, #223344, #334455);
+        }
+        .water-tile { background: linear-gradient(45deg, #19466b, #1c5d8f); }
+        .terrain-tile { background: linear-gradient(45deg, #4b7c45, #5a8842); }
+        .sand-tile { background: linear-gradient(45deg, #d5bc84, #e8d5a0); }
+        .rock-tile { background: linear-gradient(45deg, #8a7a5e, #9a7040); }
+        
+        .feature-list {
+            columns: 2;
+            column-gap: 30px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            margin: 8px 0;
+            padding: 5px;
+            background: rgba(102, 221, 255, 0.1);
+            border-radius: 3px;
+            break-inside: avoid;
+        }
+        .feature-list li::before {
+            content: "✨ ";
+            color: #ffdd66;
+        }
+        
+        .layer-diagram {
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            background: #000814;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #223344;
+            overflow-x: auto;
+            white-space: pre;
+        }
+        
+        .z-layer {
+            color: #88ddff;
+        }
+        .z-100 { color: #ff6b6b; }
+        .z-400 { color: #4ecdc4; }
+        .z-600 { color: #45b7d1; }
+        .z-1000 { color: #96ceb4; }
+        
+        .code-block {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            color: #e6edf3;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+        }
+        .keyword { color: #ff7b72; }
+        .string { color: #a5d6ff; }
+        .comment { color: #8b949e; }
+        .function { color: #d2a8ff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>1942 Enhanced Tile & Shadow System</h1>
+        
+        <div class="section">
+            <h2>Layer Architecture Overview</h2>
+            <div class="layer-diagram"><span class="z-layer">┌─────────────────────────────────────────────────────────────────┐
+│                       <span class="z-1000">UI LAYER (Z: 1000)</span>                        │
+├─────────────────────────────────────────────────────────────────┤
+│                    <span class="z-600">PLAYER & ENTITIES (Z: 600-900)</span>                │
+├─────────────────────────────────────────────────────────────────┤
+│                    <span class="z-400">🌊 WAVE EFFECTS (Z: 400)</span> ← NEW!               │
+├─────────────────────────────────────────────────────────────────┤
+│                   GROUND ENEMIES (Z: 300)                      │
+├─────────────────────────────────────────────────────────────────┤
+│                    SHADOW LAYER (Z: 200)                       │
+├─────────────────────────────────────────────────────────────────┤
+│                   <span class="z-100">TERRAIN LAYER (Z: 100)</span>                        │
+│                   (Parallax: 0.5x scroll)                      │
+├─────────────────────────────────────────────────────────────────┤
+│                     WATER LAYER (Z: 0)                         │
+│                   (Parallax: 0.2x scroll)                      │
+└─────────────────────────────────────────────────────────────────┘</span></div>
+        </div>
+
+        <div class="section">
+            <h2>Enhanced Geometric Tiles</h2>
+            <div class="demo-grid">
+                <div class="tile-demo">
+                    <h3>Water Tiles</h3>
+                    <div class="tile-preview water-tile">WATER</div>
+                    <ul>
+                        <li>Animated current lines</li>
+                        <li>Subtle ripple effects</li>
+                        <li>Dynamic foam patterns</li>
+                        <li>Depth-based colors</li>
+                    </ul>
+                </div>
+                
+                <div class="tile-demo">
+                    <h3>Terrain Tiles</h3>
+                    <div class="tile-preview terrain-tile">TERRAIN</div>
+                    <ul>
+                        <li>Wind-blown dune stripes</li>
+                        <li>Geometric leaf clusters</li>
+                        <li>Angular rock facets</li>
+                        <li>Clean architectural lines</li>
+                    </ul>
+                </div>
+                
+                <div class="tile-demo">
+                    <h3>Sand Tiles</h3>
+                    <div class="tile-preview sand-tile">SAND</div>
+                    <ul>
+                        <li>Diagonal wind patterns</li>
+                        <li>Procedural stripes</li>
+                        <li>Brightness variation</li>
+                        <li>Geometric consistency</li>
+                    </ul>
+                </div>
+                
+                <div class="tile-demo">
+                    <h3>Rock Tiles</h3>
+                    <div class="tile-preview rock-tile">ROCK</div>
+                    <ul>
+                        <li>Sharp triangular facets</li>
+                        <li>Geometric highlights</li>
+                        <li>Angular patterns</li>
+                        <li>Clean geometric style</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Boat Wave Animation System</h2>
+            <div class="code-block">
+                <code><span class="comment">// Wave Effect Rendering Pipeline</span>
+<span class="function">drawWaveEffects</span>(<span class="keyword">renderer</span>, <span class="keyword">groundEnemies</span>, <span class="keyword">tick</span>) {
+  <span class="keyword">for</span> (<span class="keyword">const</span> boat <span class="keyword">of</span> groundEnemies.<span class="function">filter</span>(e => e.type === <span class="string">'ship'</span>)) {
+    <span class="comment">// Wave effects render ON TOP of water tiles</span>
+    <span class="comment">// but BEHIND boat sprites (Z-index: 400)</span>
+    
+    <span class="function">renderWakePattern</span>(boat.x, boat.y, <span class="string">'wake'</span>);
+    <span class="function">renderSplashEffect</span>(boat.x, boat.y, <span class="string">'splash'</span>);
+    <span class="function">renderFoamTrail</span>(boat.x, boat.y, <span class="string">'foam'</span>);
+  }
+}</code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Enhanced Shadow Layer</h2>
+            <ul class="feature-list">
+                <li>Stepped hexagonal cloud shadows with layered opacity</li>
+                <li>Angular diamond formations with concentric rings</li>
+                <li>Rectangular strip formations with sine wave variation</li>
+                <li>Geometric wisp shadows for atmospheric depth</li>
+                <li>Dynamic movement patterns with mathematical precision</li>
+                <li>Performance-optimized geometric calculations</li>
+                <li>Maintains clean geometric art style throughout</li>
+                <li>Multiple shadow types for visual variety</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technical Implementation</h2>
+            <div class="code-block">
+                <code><span class="comment">// Enhanced Tile Rendering</span>
+<span class="function">drawGeometricWaterTile</span>(<span class="keyword">renderer</span>, <span class="keyword">x</span>, <span class="keyword">y</span>, <span class="keyword">size</span>, <span class="keyword">tileType</span>, <span class="keyword">baseColor</span>, <span class="keyword">tick</span>) {
+  <span class="keyword">switch</span> (tileType) {
+    <span class="keyword">case</span> <span class="string">0</span>: <span class="comment">// Deep water - subtle current lines</span>
+      <span class="keyword">const</span> currentY = y + (tick * <span class="string">0.3</span>) % size;
+      renderer.<span class="function">fillRect</span>(x + <span class="string">8</span>, currentY, size - <span class="string">16</span>, <span class="string">2</span>, <span class="string">'rgba(255,255,255,0.05)'</span>);
+      <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="string">3</span>: <span class="comment">// Foam/surf - dynamic white caps</span>
+      <span class="keyword">const</span> foamY = y + (tick % <span class="string">32</span>);
+      renderer.<span class="function">fillRect</span>(x + <span class="string">4</span>, foamY, size - <span class="string">8</span>, <span class="string">3</span>, <span class="string">'rgba(255,255,255,0.4)'</span>);
+      <span class="keyword">break</span>;
+  }
+}</code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Development Progress</h2>
+            <ul class="feature-list">
+                <li>✅ Layer architecture documentation completed</li>
+                <li>✅ Enhanced geometric tile rendering system</li>
+                <li>✅ Sophisticated shadow layer with multiple patterns</li>
+                <li>🚧 Boat wave animation system (in progress)</li>
+                <li>🚧 Destroyable turret system (in progress)</li>
+                <li>🚧 Board editor enhancements (in progress)</li>
+                <li>📋 Integration testing and performance optimization</li>
+                <li>📋 Final polish and visual effects tuning</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Art Style Guidelines</h2>
+            <p><strong>Clean Geometric Approach:</strong></p>
+            <ul class="feature-list">
+                <li>Sharp, angular shapes with clear edges</li>
+                <li>Mathematical precision in patterns</li>
+                <li>Consistent geometric vocabulary</li>
+                <li>No organic/Ghibli-style elements</li>
+                <li>Functional beauty through geometry</li>
+                <li>Limited but effective color palettes</li>
+                <li>Performance-conscious implementation</li>
+                <li>Scalable across different tile sizes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

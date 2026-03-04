@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "template": "alpha",
+  "sourceRoot": "1942/assets/tiles/alpha/clean",
+  "tileSize": 64,
+  "namingPattern": "^[a-z0-9]+(?:-[A-Za-z0-9]+)*\\.png$",
+  "campaigns": {
+    "coral_front": {
+      "displayName": "Coral Front",
+      "water": "#1c5d8f",
+      "waterMid": "#22729e",
+      "waterShallow": "#5ac8e0",
+      "foam": "#b4f0ff",
+      "sand": "#e6c88a",
+      "grass": "#5daa5d",
+      "rock": "#8a7a5e",
+      "structure": "#6b5d42",
+      "path": "#c7ae78",
+      "cloud": "#f0f5ff",
+      "cloudStorm": "#9cb1cc"
+    },
+    "jungle_spear": {
+      "displayName": "Jungle Spear",
+      "water": "#2d5a3e",
+      "waterMid": "#2a4d38",
+      "waterShallow": "#4d8a62",
+      "foam": "#9ad9b8",
+      "sand": "#8a7a52",
+      "grass": "#3f6f35",
+      "rock": "#55624d",
+      "structure": "#4a3f2d",
+      "path": "#6d7d51",
+      "cloud": "#d9e5d7",
+      "cloudStorm": "#9aab98"
+    },
+    "dust_convoy": {
+      "displayName": "Dust Convoy",
+      "water": "#91643d",
+      "waterMid": "#7a5530",
+      "waterShallow": "#b58454",
+      "foam": "#f0d2a0",
+      "sand": "#be8a52",
+      "grass": "#d4a065",
+      "rock": "#9a7040",
+      "structure": "#786030",
+      "path": "#d0a870",
+      "cloud": "#e8d2a5",
+      "cloudStorm": "#c2a16f"
+    },
+    "iron_monsoon": {
+      "displayName": "Iron Monsoon",
+      "water": "#2e3455",
+      "waterMid": "#252b42",
+      "waterShallow": "#3a4268",
+      "foam": "#91a4c6",
+      "sand": "#5a6080",
+      "grass": "#68739a",
+      "rock": "#4b5578",
+      "structure": "#3d4560",
+      "path": "#6a7395",
+      "cloud": "#bcc7da",
+      "cloudStorm": "#7a889f"
+    }
+  },
+  "tiles": [
+    { "id": 1, "name": "water-deep", "layer": "water", "source": "water-deep.png", "paletteKey": "water" },
+    { "id": 2, "name": "water-mid", "layer": "water", "source": "water-shallow.png", "paletteKey": "waterMid" },
+    { "id": 3, "name": "water-shallow", "layer": "water", "source": "water-shallow.png", "paletteKey": "waterShallow" },
+    { "id": 4, "name": "water-foam", "layer": "water", "source": "water-foam.png", "paletteKey": "foam" },
+
+    { "id": 10, "name": "terrain-sand", "layer": "terrain", "source": "sand.png", "paletteKey": "sand" },
+    { "id": 11, "name": "terrain-grass", "layer": "terrain", "source": "grass.png", "paletteKey": "grass" },
+    { "id": 12, "name": "terrain-rock", "layer": "terrain", "source": "grass.png", "paletteKey": "rock" },
+    { "id": 13, "name": "terrain-structure", "layer": "terrain", "source": "sand.png", "paletteKey": "structure" },
+    { "id": 14, "name": "terrain-path", "layer": "terrain", "source": "sand-grass-s.png", "paletteKey": "path" },
+
+    { "id": 20, "name": "edge-N", "layer": "terrain", "source": "edge-N.png", "paletteKey": "sand" },
+    { "id": 21, "name": "edge-S", "layer": "terrain", "source": "edge-S.png", "paletteKey": "sand" },
+    { "id": 22, "name": "edge-E", "layer": "terrain", "source": "edge-E.png", "paletteKey": "sand" },
+    { "id": 23, "name": "edge-W", "layer": "terrain", "source": "edge-W.png", "paletteKey": "sand" },
+    { "id": 24, "name": "edge-NE", "layer": "terrain", "source": "edge-NE.png", "paletteKey": "sand" },
+    { "id": 25, "name": "edge-NW", "layer": "terrain", "source": "edge-NW.png", "paletteKey": "sand" },
+    { "id": 26, "name": "edge-SE", "layer": "terrain", "source": "edge-SE.png", "paletteKey": "sand" },
+    { "id": 27, "name": "edge-SW", "layer": "terrain", "source": "edge-SW.png", "paletteKey": "sand" },
+    { "id": 28, "name": "edge-inner-NE", "layer": "terrain", "source": "inner-NE.png", "paletteKey": "sand" },
+    { "id": 29, "name": "edge-inner-NW", "layer": "terrain", "source": "inner-NW.png", "paletteKey": "sand" },
+    { "id": 30, "name": "edge-inner-SE", "layer": "terrain", "source": "inner-SE.png", "paletteKey": "sand" },
+    { "id": 31, "name": "edge-inner-SW", "layer": "terrain", "source": "inner-SW.png", "paletteKey": "sand" },
+
+    { "id": 40, "name": "cloud-thin", "layer": "cloud", "source": "cloud-thin.png", "paletteKey": "cloud" },
+    { "id": 41, "name": "cloud-thick", "layer": "cloud", "source": "cloud-thick.png", "paletteKey": "cloud" },
+    { "id": 42, "name": "cloud-storm", "layer": "cloud", "source": "cloud-thick.png", "paletteKey": "cloudStorm" }
+  ]
+}

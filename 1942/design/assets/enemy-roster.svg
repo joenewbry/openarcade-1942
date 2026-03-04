@@ -1,0 +1,74 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='760' viewBox='0 0 1200 760'>
+  <rect width='1200' height='760' fill='#0f1626'/>
+  <text x='40' y='50' fill='#ecf7ff' font-family='monospace' font-size='30'>Enemy Animation Roster</text>
+
+  <g transform='translate(30,90)'>
+    <rect width='360' height='180' fill='#1c2d47' stroke='#ff8b8b' stroke-width='2'/>
+    <text x='14' y='26' fill='#ffd5d5' font-family='monospace' font-size='16'>Scout Zero (3-frame loop)</text>
+    <rect x='16' y='52' width='80' height='40' fill='#8a1a1a'/>
+    <rect x='116' y='52' width='80' height='40' fill='#a62323'/>
+    <rect x='216' y='52' width='80' height='40' fill='#8a1a1a'/>
+    <text x='16' y='132' fill='#d5e9ff' font-family='monospace' font-size='13'>Role: intro fighter</text>
+    <text x='16' y='152' fill='#d5e9ff' font-family='monospace' font-size='13'>Mixing: appears in C1/C2</text>
+  </g>
+
+  <g transform='translate(420,90)'>
+    <rect width='360' height='180' fill='#1c2d47' stroke='#ffc28d' stroke-width='2'/>
+    <text x='14' y='26' fill='#ffe2c7' font-family='monospace' font-size='16'>Torpedo Gull (3-frame loop)</text>
+    <rect x='16' y='52' width='80' height='40' fill='#cc8844'/>
+    <rect x='116' y='52' width='80' height='40' fill='#d0934d'/>
+    <rect x='216' y='52' width='80' height='40' fill='#cc8844'/>
+    <text x='16' y='132' fill='#d5e9ff' font-family='monospace' font-size='13'>Role: low-altitude bomber</text>
+    <text x='16' y='152' fill='#d5e9ff' font-family='monospace' font-size='13'>Mixing: C1 pressure waves</text>
+  </g>
+
+  <g transform='translate(810,90)'>
+    <rect width='360' height='180' fill='#1c2d47' stroke='#b5f38d' stroke-width='2'/>
+    <text x='14' y='26' fill='#d8ffc4' font-family='monospace' font-size='16'>Canopy Raider / Hornet</text>
+    <rect x='16' y='52' width='80' height='40' fill='#4a7d37'/>
+    <rect x='116' y='52' width='80' height='40' fill='#5b8746'/>
+    <rect x='216' y='52' width='80' height='40' fill='#4a7d37'/>
+    <text x='16' y='132' fill='#d5e9ff' font-family='monospace' font-size='13'>Role: jungle ambush pair</text>
+    <text x='16' y='152' fill='#d5e9ff' font-family='monospace' font-size='13'>Mixing: C2 + C4 recycle</text>
+  </g>
+
+  <g transform='translate(30,300)'>
+    <rect width='360' height='180' fill='#1c2d47' stroke='#f3cd8d' stroke-width='2'/>
+    <text x='14' y='26' fill='#ffeecb' font-family='monospace' font-size='16'>Dune Lancer / Rail Bomber</text>
+    <rect x='16' y='52' width='80' height='40' fill='#b87a3f'/>
+    <rect x='116' y='52' width='80' height='40' fill='#d49956'/>
+    <rect x='216' y='52' width='80' height='40' fill='#b87a3f'/>
+    <text x='16' y='132' fill='#d5e9ff' font-family='monospace' font-size='13'>Role: convoy anti-air core</text>
+    <text x='16' y='152' fill='#d5e9ff' font-family='monospace' font-size='13'>Mixing: C3 + C4 high pressure</text>
+  </g>
+
+  <g transform='translate(420,300)'>
+    <rect width='360' height='180' fill='#1c2d47' stroke='#c1b0ff' stroke-width='2'/>
+    <text x='14' y='26' fill='#dfd8ff' font-family='monospace' font-size='16'>Storm Wraith / Sub Spear</text>
+    <rect x='16' y='52' width='80' height='40' fill='#6b5fa2'/>
+    <rect x='116' y='52' width='80' height='40' fill='#5b6793'/>
+    <rect x='216' y='52' width='80' height='40' fill='#6b5fa2'/>
+    <text x='16' y='132' fill='#d5e9ff' font-family='monospace' font-size='13'>Role: low-visibility control</text>
+    <text x='16' y='152' fill='#d5e9ff' font-family='monospace' font-size='13'>Mixing: C4 signature threats</text>
+  </g>
+
+  <g transform='translate(810,300)'>
+    <rect width='360' height='180' fill='#1c2d47' stroke='#ff8ea0' stroke-width='2'/>
+    <text x='14' y='26' fill='#ffd1db' font-family='monospace' font-size='16'>Mini Bosses (all campaigns)</text>
+    <rect x='16' y='52' width='90' height='40' fill='#af3446'/>
+    <rect x='126' y='52' width='90' height='40' fill='#c14455'/>
+    <rect x='236' y='52' width='90' height='40' fill='#af3446'/>
+    <text x='16' y='132' fill='#d5e9ff' font-family='monospace' font-size='13'>3 mini bosses per campaign</text>
+    <text x='16' y='152' fill='#d5e9ff' font-family='monospace' font-size='13'>Each drop guaranteed upgrade</text>
+  </g>
+
+  <g transform='translate(30,510)'>
+    <rect width='1140' height='220' fill='#102640' stroke='#5790c3'/>
+    <text x='20' y='36' fill='#d8efff' font-family='monospace' font-size='22'>Final Boss Escalation</text>
+    <text x='20' y='70' fill='#d8efff' font-family='monospace' font-size='15'>C1 Coral Dreadnought HP 280</text>
+    <text x='20' y='98' fill='#d8efff' font-family='monospace' font-size='15'>C2 Jungle Citadel HP 320</text>
+    <text x='20' y='126' fill='#d8efff' font-family='monospace' font-size='15'>C3 Dust Colossus HP 360</text>
+    <text x='20' y='154' fill='#d8efff' font-family='monospace' font-size='15'>C4 Iron Tempest HP 420</text>
+    <text x='20' y='190' fill='#ffe2b8' font-family='monospace' font-size='14'>Each final boss uses 4-frame animation cycle + phase pressure increase at 66% and 33% HP.</text>
+  </g>
+</svg>

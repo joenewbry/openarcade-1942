@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1942 Level Editor Core</title>
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="button-row">
+      <button id="newLevelBtn" type="button">New</button>
+      <button id="saveBtn" type="button">Save</button>
+      <button id="loadBtn" type="button">Load</button>
+      <button id="exportBtn" type="button">Export</button>
+      <input id="fileInput" type="file" accept="application/json,.json" hidden />
+    </div>
+    <div class="button-row">
+      <button id="undoBtn" type="button">Undo</button>
+      <button id="redoBtn" type="button">Redo</button>
+      <button id="gridBtn" type="button" aria-pressed="true">Grid</button>
+    </div>
+    <div class="field-row">
+      <label for="campaignSelect">Campaign</label>
+      <select id="campaignSelect"></select>
+    </div>
+    <div class="field-row">
+      <label for="levelNameInput">Level</label>
+      <input id="levelNameInput" type="text" value="Coral Front - Level 1" />
+    </div>
+    <div class="field-row zoom-row">
+      <label for="zoomRange">Zoom</label>
+      <input id="zoomRange" type="range" min="25" max="200" step="25" value="100" />
+      <span id="zoomLabel">100%</span>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="panel panel-left">
+      <section class="panel-block">
+        <h2>Tools</h2>
+        <div id="toolButtons" class="tool-grid"></div>
+      </section>
+      <section class="panel-block">
+        <h2>Palette</h2>
+        <div class="field-row palette-filter-row">
+          <label for="paletteCategorySelect">Category</label>
+          <select id="paletteCategorySelect"></select>
+        </div>
+        <div id="palette" class="palette-grid"></div>
+      </section>
+      <section class="panel-block">
+        <h2>Selection</h2>
+        <p id="selectionInfo">None</p>
+      </section>
+    </aside>
+
+    <section class="canvas-shell" id="canvasShell">
+      <canvas id="editorCanvas" width="960" height="9600" aria-label="1942 level canvas"></canvas>
+    </section>
+
+    <aside class="panel panel-right" id="propertiesPanel">
+      <section class="panel-block">
+        <h2>Active Layer</h2>
+        <div id="activeLayerButtons" class="layer-tabs"></div>
+      </section>
+      <section class="panel-block">
+        <h2>Layers</h2>
+        <div id="layerControls"></div>
+      </section>
+      <section class="panel-block">
+        <h2>Tile</h2>
+        <p id="tileInfo">ID 1 · water-deep</p>
+      </section>
+      <section class="panel-block">
+        <h2>Cursor</h2>
+        <p id="cursorInfo">col -, row -</p>
+      </section>
+      <section class="panel-block">
+        <h2>Shortcuts</h2>
+        <p class="muted">B paint, Shift+drag (while painting) rectangle fill, E erase, G fill, V select, R rect, L line, S stamp, N entities, Ctrl+G grid, Ctrl+Z/Y undo/redo</p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="statusbar">
+    <span id="statusText">Ready.</span>
+  </footer>
+
+  <script type="module" src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+[
+  {
+    "filename": "specter-idle.png",
+    "category": "player",
+    "width": 753,
+    "height": 778,
+    "description": "Specter stealth fighter idle position, silver-blue, top-down"
+  },
+  {
+    "filename": "specter-bank-left.png",
+    "category": "player",
+    "width": 990,
+    "height": 989,
+    "description": "Specter stealth fighter banking left, silver-blue"
+  },
+  {
+    "filename": "specter-bank-right.png",
+    "category": "player",
+    "width": 759,
+    "height": 730,
+    "description": "Specter stealth fighter banking right, silver-blue"
+  },
+  {
+    "filename": "atlas-idle.png",
+    "category": "player",
+    "width": 1010,
+    "height": 856,
+    "description": "Atlas heavy armored bomber idle position, olive-green"
+  },
+  {
+    "filename": "atlas-bank-left.png",
+    "category": "player",
+    "width": 1004,
+    "height": 998,
+    "description": "Atlas heavy armored bomber banking left, olive-green"
+  },
+  {
+    "filename": "atlas-bank-right.png",
+    "category": "player",
+    "width": 962,
+    "height": 897,
+    "description": "Atlas heavy armored bomber banking right, olive-green"
+  },
+  {
+    "filename": "enemy-scout.png",
+    "category": "enemy",
+    "width": 694,
+    "height": 911,
+    "description": "Small red-orange Japanese Zero scout fighter"
+  },
+  {
+    "filename": "enemy-torpedo.png",
+    "category": "enemy",
+    "width": 935,
+    "height": 911,
+    "description": "Dark red torpedo bomber carrying torpedo"
+  },
+  {
+    "filename": "enemy-raider.png",
+    "category": "enemy",
+    "width": 576,
+    "height": 1024,
+    "description": "Fast swept-wing crimson raider fighter"
+  },
+  {
+    "filename": "enemy-gunship.png",
+    "category": "enemy",
+    "width": 942,
+    "height": 986,
+    "description": "Dark gray heavy gunship with dual cannons"
+  },
+  {
+    "filename": "enemy-bomber.png",
+    "category": "enemy",
+    "width": 1008,
+    "height": 965,
+    "description": "Large black bomber with open bomb bay"
+  },
+  {
+    "filename": "boss-coral.png",
+    "category": "boss",
+    "width": 2048,
+    "height": 2048,
+    "description": "Massive blue-green battleship, coral reef campaign boss"
+  },
+  {
+    "filename": "boss-desert.png",
+    "category": "boss",
+    "width": 800,
+    "height": 1990,
+    "description": "Sand-brown aircraft carrier, desert campaign boss"
+  },
+  {
+    "filename": "boss-arctic.png",
+    "category": "boss",
+    "width": 2002,
+    "height": 2003,
+    "description": "Ice-white flying fortress, arctic campaign boss"
+  },
+  {
+    "filename": "boss-storm.png",
+    "category": "boss",
+    "width": 1892,
+    "height": 1760,
+    "description": "Dark purple super-weapon, storm campaign final boss"
+  },
+  {
+    "filename": "powerup-shot.png",
+    "category": "powerup",
+    "width": 410,
+    "height": 891,
+    "description": "Golden bullet shot upgrade power-up icon"
+  },
+  {
+    "filename": "powerup-speed.png",
+    "category": "powerup",
+    "width": 637,
+    "height": 632,
+    "description": "Blue speed boost power-up icon"
+  },
+  {
+    "filename": "powerup-shield.png",
+    "category": "powerup",
+    "width": 850,
+    "height": 850,
+    "description": "Cyan shield bubble power-up icon"
+  },
+  {
+    "filename": "powerup-bomb.png",
+    "category": "powerup",
+    "width": 687,
+    "height": 687,
+    "description": "Red bomb power-up icon"
+  },
+  {
+    "filename": "powerup-double.png",
+    "category": "powerup",
+    "width": 554,
+    "height": 552,
+    "description": "Purple double-shot power-up icon"
+  },
+  {
+    "filename": "explosion-small.png",
+    "category": "effect",
+    "width": 733,
+    "height": 697,
+    "description": "Small fiery orange explosion effect"
+  },
+  {
+    "filename": "explosion-large.png",
+    "category": "effect",
+    "width": 963,
+    "height": 974,
+    "description": "Large dramatic explosion with debris"
+  },
+  {
+    "filename": "explosion-boss.png",
+    "category": "effect",
+    "width": 1766,
+    "height": 1972,
+    "description": "Massive boss explosion with shockwave"
+  },
+  {
+    "filename": "turret-small.png",
+    "category": "ground",
+    "width": 16,
+    "height": 16,
+    "description": "Small gun turret for destroyable ship components"
+  },
+  {
+    "filename": "turret-cannon.png",
+    "category": "ground",
+    "width": 16,
+    "height": 16,
+    "description": "Large cannon turret for battleships"
+  },
+  {
+    "filename": "turret-destroyed.png",
+    "category": "ground",
+    "width": 16,
+    "height": 16,
+    "description": "Destroyed turret with smoke and damage"
+  }
+]

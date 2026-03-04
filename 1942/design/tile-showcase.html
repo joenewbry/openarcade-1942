@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1942 Tile Set Showcase</title>
+    <style>
+        body { 
+            font-family: monospace; 
+            background: #1a1a1a; 
+            color: #fff; 
+            margin: 0; 
+            padding: 20px; 
+        }
+        .container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px; 
+            margin-bottom: 40px; 
+        }
+        .tile-set { 
+            background: #2a2a2a; 
+            border-radius: 8px; 
+            padding: 20px; 
+            border: 1px solid #444; 
+        }
+        .tile-set h2 { 
+            color: #4CAF50; 
+            margin-top: 0; 
+            border-bottom: 1px solid #444; 
+            padding-bottom: 10px; 
+        }
+        .approach { 
+            color: #888; 
+            font-style: italic; 
+            margin-bottom: 15px; 
+        }
+        .tiles-grid { 
+            display: grid; 
+            grid-template-columns: repeat(6, 64px); 
+            gap: 2px; 
+            margin-bottom: 20px; 
+        }
+        .tile-preview { 
+            width: 64px; 
+            height: 64px; 
+            border: 1px solid #555; 
+            background-color: #333; 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 10px; 
+            color: #aaa; 
+        }
+        .level-preview { 
+            width: 768px; /* 12 * 64 */
+            height: 768px; /* 12 * 64 */
+            border: 2px solid #555; 
+            background-color: #333; 
+            margin: 0 auto; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #666; 
+            font-size: 14px; 
+        }
+        .notes { 
+            background: #1e1e1e; 
+            padding: 10px; 
+            border-radius: 4px; 
+            margin-top: 15px; 
+            font-size: 12px; 
+            color: #ccc; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 1942 Tile Set Showcase</h1>
+        <p style="color: #888; margin-bottom: 30px;">
+            Comparing 4 different approaches to 64x64 pixel tiles for the Coral Front campaign.
+            <br>Spec: Water (deep/shallow), terrain (sand/grass), edge pieces, clouds.
+        </p>
+
+        <div class="grid">
+            <!-- ALPHA: Clean & Geometric -->
+            <div class="tile-set">
+                <h2>ALPHA: Clean & Geometric</h2>
+                <div class="approach">Tech Architect + Miyamoto collaboration</div>
+                <div class="approach">Focus: Sharp, clean pixel art with clear geometric shapes and high contrast</div>
+                
+                <h3>Individual Tiles</h3>
+                <div class="tiles-grid">
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/water-deep-64.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/water-shallow-64.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/sand-64.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/grass-64.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/edge-N-64.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/edge-S-64.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/edge-NE.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/edge-NW.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/cloud-thin.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/alpha/cloud-thick-64.png')"></div>
+                </div>
+                
+                <h3>12x12 Level Sample</h3>
+                <div class="level-preview" style="background-image: url('../assets/tiles/alpha/clean/island-organic-12x12.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                
+                <div class="notes">
+                    <strong>Alpha Results:</strong> Dual-track strategy with programmatic tiles (guaranteed edge matching) + AI enhancement. Clean geometric precision optimized for readability. <strong>Recommended for production</strong> due to pixel-perfect seaming and Miyamoto's accessibility focus.
+                </div>
+            </div>
+
+            <!-- BETA: Organic & Textured -->
+            <div class="tile-set">
+                <h2>BETA: Organic & Textured</h2>
+                <div class="approach">Tech Architect + Kojima collaboration</div>
+                <div class="approach">Focus: Natural, organic shapes with texture and atmospheric depth</div>
+                
+                <h3>Individual Tiles</h3>
+                <div class="tiles-grid">
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/water-deep.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/water-shallow.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/terrain-sand.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/terrain-grass.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/edge-N.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/edge-S.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/edge-corner-NE.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/edge-corner-NW.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/cloud-thin.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/beta/cloud-thick.png')"></div>
+                </div>
+                
+                <h3>12x12 Level Sample</h3>
+                <div class="level-preview" style="background-image: url('../assets/tiles/beta/island-demo-12x12.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                
+                <div class="notes">
+                    <strong>Beta Results:</strong> Most comprehensive set (23 tiles) using procedural Perlin noise generation. Kojima's atmospheric vision with organic textures and natural depth. Shallow water/foam tiles are standouts. Some corner seam alignment issues noted.
+                </div>
+            </div>
+
+            <!-- GAMMA: Retro Arcade Classic -->
+            <div class="tile-set">
+                <h2>GAMMA: Retro Arcade Classic</h2>
+                <div class="approach">Tech Architect + Ikeda collaboration</div>
+                <div class="approach">Focus: Authentic 80s/90s arcade pixel art with limited color palettes</div>
+                
+                <h3>Individual Tiles</h3>
+                <div class="tiles-grid">
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/01-water-deep.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/03-water-shallow.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/10-terrain-sand.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/11-terrain-grass.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/20-edge-N.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/21-edge-S.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/24-edge-NE.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/25-edge-NW.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/40-cloud-thin.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/gamma/41-cloud-thick.png')"></div>
+                </div>
+                
+                <h3>12x12 Level Sample</h3>
+                <div class="level-preview" style="background-image: url('../assets/tiles/gamma/grid-12x12-island.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                
+                <div class="notes">
+                    <strong>Gamma Results:</strong> Hardcore retro authenticity with NES-era constraints (strict 4-5 color palettes, no anti-aliasing, structured dithering). Includes both outer AND inner corner pieces. L-shaped island with detached reef shows classic shmup design sensibility.
+                </div>
+            </div>
+
+            <!-- DELTA: Minimalist & Stylized -->
+            <div class="tile-set">
+                <h2>DELTA: Minimalist & Stylized</h2>
+                <div class="approach">Tech Architect + Okamoto collaboration</div>
+                <div class="approach">Focus: Simple, bold shapes with modern indie game aesthetics</div>
+                
+                <h3>Individual Tiles</h3>
+                <div class="tiles-grid">
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/water-deep.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/water-shallow.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/terrain-sand.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/terrain-grass.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/edge-N.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/edge-S.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/edge-NE.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/edge-NW.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/cloud-thin.png')"></div>
+                    <div class="tile-preview" style="background-image: url('../assets/tiles/delta/cloud-thick.png')"></div>
+                </div>
+                
+                <h3>12x12 Level Sample</h3>
+                <div class="level-preview" style="background-image: url('../assets/tiles/delta/island-grid-12x12.png'); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                
+                <div class="notes">
+                    <strong>Delta Results:</strong> Clean minimalist approach with modern indie aesthetics. Excellent color separation and readability at scroll speed. Strong tropical island formation. Note: Generated tiles need alpha transparency for proper cloud overlay integration.
+                </div>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid #444; padding-top: 20px; margin-top: 40px;">
+            <h2>🎯 Evaluation Criteria</h2>
+            <ul style="color: #ccc;">
+                <li><strong>Visual Cohesion:</strong> Do tiles work well together as a set?</li>
+                <li><strong>Readability:</strong> Can players easily distinguish terrain types during gameplay?</li>
+                <li><strong>Performance:</strong> How well will these compress and tile in WebGL?</li>
+                <li><strong>Scalability:</strong> How well will this style work for other campaigns?</li>
+                <li><strong>Feel:</strong> Does it capture the right arcade shooter vibe?</li>
+            </ul>
+        </div>
+
+        <div style="background: #2a2a2a; padding: 15px; border-radius: 8px; margin-top: 20px;">
+            <strong>Next Steps:</strong>
+            <ol style="color: #ccc;">
+                <li>Review generated tile sets from each team</li>
+                <li>Select winning approach or hybrid elements</li>
+                <li>Generate full tile sets for all 4 campaigns</li>
+                <li>Integrate into game engine</li>
+                <li>Build level editor with new tiles</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // This script will be updated to load actual tile images when they're generated
+        console.log('Tile showcase initialized - waiting for generated assets');
+    </script>
+</body>
+</html>

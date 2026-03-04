@@ -1,0 +1,56 @@
+{
+  "id": "whale-ambient-strip",
+  "source": "whale-ambient-strip.png",
+  "frameWidth": 128,
+  "frameHeight": 1408,
+  "columns": 6,
+  "rows": 1,
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "file": "./whale-ambient-strip/whale-ambient-strip-f00.png"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "file": "./whale-ambient-strip/whale-ambient-strip-f01.png"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "file": "./whale-ambient-strip/whale-ambient-strip-f02.png"
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 3,
+      "file": "./whale-ambient-strip/whale-ambient-strip-f03.png"
+    },
+    {
+      "index": 4,
+      "row": 0,
+      "col": 4,
+      "file": "./whale-ambient-strip/whale-ambient-strip-f04.png"
+    },
+    {
+      "index": 5,
+      "row": 0,
+      "col": 5,
+      "file": "./whale-ambient-strip/whale-ambient-strip-f05.png"
+    }
+  ],
+  "animations": {
+    "whale_loop": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+}

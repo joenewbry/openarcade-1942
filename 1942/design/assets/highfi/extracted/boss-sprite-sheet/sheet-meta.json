@@ -1,0 +1,72 @@
+{
+  "id": "boss-sprite-sheet",
+  "source": "boss-sprite-sheet.png",
+  "frameWidth": 192,
+  "frameHeight": 704,
+  "columns": 4,
+  "rows": 2,
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f00.png"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f01.png"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f02.png"
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 3,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f03.png"
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 0,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f04.png"
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 1,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f05.png"
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "col": 2,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f06.png"
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "col": 3,
+      "file": "./boss-sprite-sheet/boss-sprite-sheet-f07.png"
+    }
+  ],
+  "animations": {
+    "boss_phase_a": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "boss_phase_b": [
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html><head><title>Tile Atlas Generator</title></head>
+<body style="background:#222;color:#eee;font-family:monospace;padding:20px">
+<h1>1942 Tile Atlas Generator</h1>
+<p>Click a button to generate and download the atlas PNG.</p>
+<div id="buttons"></div>
+<canvas id="preview" style="border:1px solid #555;margin-top:12px"></canvas>
+<div id="log" style="margin-top:12px;font-size:12px;color:#888"></div>
+<script>
+const TS = 64; // tile size
+const ATLAS_COLS = 8;
+
+const CAMPAIGNS = {
+  coral_front: {
+    water: ['#1c5d8f','#2980b9','#19466b','#7ee8ff','#1a6fa0','#236d99','#155580','#5ac8e0'],
+    terrain: [null,'#e6c88a','#5daa5d','#8b8680','#707070','#d4b87a','#4d9a4d','#7a7a74',
+              '#c8a86a','#6aba6a','#656058','#606060','#f0e0c0','#3d8a3d','#9b968e','#585858'],
+  },
+  jungle_spear: {
+    water: ['#3a6a4f','#4d8c65','#25442f','#8ed4a0','#306048','#427a58','#1d3828','#70b888'],
+    terrain: [null,'#8b7355','#2d6e2d','#6b6b60','#555550','#7a6348','#1d5e1d','#5b5b52',
+              '#6a5338','#3d7e3d','#4b4b42','#454540','#9a8368','#0d4e0d','#7b7b70','#353530'],
+  },
+  dust_convoy: {
+    water: ['#91643d','#b8884d','#68452b','#d4a860','#805838','#a07844','#583820','#c09850'],
+    terrain: [null,'#d4a860','#a08050','#8b7355','#808080','#c49850','#907040','#7b6348',
+              '#b48840','#b09060','#6b5338','#707070','#e4b870','#806030','#9b8368','#606060'],
+  },
+  iron_monsoon: {
+    water: ['#2e3455','#3d4570','#1d2238','#6070a0','#283050','#354065','#182030','#506090'],
+    terrain: [null,'#606878','#4a5260','#555d6b','#707880','#505868','#3a4250','#454d5b',
+              '#404850','#5a6270','#353d4b','#606870','#707a88','#2a3240','#65707e','#505860'],
+  },
+};
+
+// Cloud tiles (shared)
+const CLOUD_COLORS = [
+  null, 'rgba(255,255,255,0.15)', 'rgba(255,255,255,0.3)',
+  'rgba(200,210,230,0.25)', 'rgba(240,240,255,0.12)',
+  'rgba(230,235,250,0.2)', 'rgba(210,220,240,0.18)', 'rgba(190,200,220,0.22)'
+];
+
+function log(msg) { document.getElementById('log').innerHTML += msg + '<br>'; }
+
+function generateAtlas(colors, rows, name) {
+  const cols = ATLAS_COLS;
+  const totalTiles = rows * cols;
+  const c = document.createElement('canvas');
+  c.width = cols * TS;
+  c.height = rows * TS;
+  const ctx = c.getContext('2d');
+
+  for (let i = 0; i < totalTiles && i < colors.length; i++) {
+    const color = colors[i];
+    if (!color) continue;
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    const x = col * TS;
+    const y = row * TS;
+
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, TS, TS);
+
+    // Add subtle pixel-art texture
+    ctx.fillStyle = 'rgba(0,0,0,0.05)';
+    for (let px = 0; px < TS; px += 8) {
+      for (let py = 0; py < TS; py += 8) {
+        if ((px + py) % 16 === 0) ctx.fillRect(x + px, y + py, 4, 4);
+      }
+    }
+    // Add subtle border highlight
+    ctx.fillStyle = 'rgba(255,255,255,0.06)';
+    ctx.fillRect(x, y, TS, 2);
+    ctx.fillRect(x, y, 2, TS);
+    ctx.fillStyle = 'rgba(0,0,0,0.08)';
+    ctx.fillRect(x, y + TS - 2, TS, 2);
+    ctx.fillRect(x + TS - 2, y, 2, TS);
+  }
+
+  // Show preview
+  const preview = document.getElementById('preview');
+  preview.width = c.width;
+  preview.height = c.height;
+  preview.getContext('2d').drawImage(c, 0, 0);
+
+  // Download
+  c.toBlob(blob => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    a.click();
+    URL.revokeObjectURL(url);
+    log(`Downloaded: ${name} (${c.width}×${c.height})`);
+  });
+
+  return c;
+}
+
+function generateJSON(colors, layerType) {
+  const frames = {};
+  for (let i = 0; i < colors.length; i++) {
+    if (!colors[i]) continue;
+    const col = i % ATLAS_COLS;
+    const row = Math.floor(i / ATLAS_COLS);
+    const name = layerType === 'water'
+      ? ['deep','shallow','dark','foam','deep-v2','shallow-v2','dark-v2','foam-v2'][i] || `tile_${i}`
+      : layerType === 'terrain'
+      ? ['empty','sand','grass','rock','structure','sand-v2','grass-v2','rock-v2',
+         'sand-v3','grass-v3','rock-v3','structure-v2','sand-light','grass-dark','rock-v4','structure-v3'][i] || `tile_${i}`
+      : ['empty','thin','thick','storm','thin-v2','thick-v2','storm-v2','thin-v3'][i] || `tile_${i}`;
+    frames[String(i)] = { x: col * TS, y: row * TS, w: TS, h: TS, name };
+  }
+  return JSON.stringify({ tileSize: TS, cols: ATLAS_COLS, frames }, null, 2);
+}
+
+// Build UI
+const btnDiv = document.getElementById('buttons');
+for (const [cid, camp] of Object.entries(CAMPAIGNS)) {
+  const section = document.createElement('div');
+  section.style.marginBottom = '12px';
+  section.innerHTML = `<h3>${cid}</h3>`;
+
+  const wBtn = document.createElement('button');
+  wBtn.textContent = `${cid}/water.png`;
+  wBtn.style.cssText = 'margin:4px;padding:6px 12px;cursor:pointer';
+  wBtn.onclick = () => generateAtlas(camp.water, 1, `${cid}_water.png`);
+
+  const tBtn = document.createElement('button');
+  tBtn.textContent = `${cid}/terrain.png`;
+  tBtn.style.cssText = 'margin:4px;padding:6px 12px;cursor:pointer';
+  tBtn.onclick = () => generateAtlas(camp.terrain, 2, `${cid}_terrain.png`);
+
+  const wjBtn = document.createElement('button');
+  wjBtn.textContent = `${cid}/water.json`;
+  wjBtn.style.cssText = 'margin:4px;padding:6px 12px;cursor:pointer';
+  wjBtn.onclick = () => {
+    const json = generateJSON(camp.water, 'water');
+    const blob = new Blob([json], {type:'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = `${cid}_water.json`; a.click(); log(`Downloaded: ${cid}_water.json`);
+  };
+
+  const tjBtn = document.createElement('button');
+  tjBtn.textContent = `${cid}/terrain.json`;
+  tjBtn.style.cssText = 'margin:4px;padding:6px 12px;cursor:pointer';
+  tjBtn.onclick = () => {
+    const json = generateJSON(camp.terrain, 'terrain');
+    const blob = new Blob([json], {type:'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = `${cid}_terrain.json`; a.click(); log(`Downloaded: ${cid}_terrain.json`);
+  };
+
+  section.append(wBtn, tBtn, wjBtn, tjBtn);
+  btnDiv.appendChild(section);
+}
+
+// Clouds (shared)
+const cloudSection = document.createElement('div');
+cloudSection.innerHTML = '<h3>shared</h3>';
+const cBtn = document.createElement('button');
+cBtn.textContent = 'shared/clouds.png';
+cBtn.style.cssText = 'margin:4px;padding:6px 12px;cursor:pointer';
+cBtn.onclick = () => generateAtlas(CLOUD_COLORS, 1, 'shared_clouds.png');
+
+const cjBtn = document.createElement('button');
+cjBtn.textContent = 'shared/clouds.json';
+cjBtn.style.cssText = 'margin:4px;padding:6px 12px;cursor:pointer';
+cjBtn.onclick = () => {
+  const json = generateJSON(CLOUD_COLORS, 'cloud');
+  const blob = new Blob([json], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'shared_clouds.json'; a.click(); log('Downloaded: shared_clouds.json');
+};
+cloudSection.append(cBtn, cjBtn);
+btnDiv.appendChild(cloudSection);
+
+// Generate All button
+const allBtn = document.createElement('button');
+allBtn.textContent = '⚡ Generate ALL Atlases';
+allBtn.style.cssText = 'margin:12px 4px;padding:10px 20px;cursor:pointer;font-size:16px;background:#e94560;color:white;border:none;border-radius:4px';
+allBtn.onclick = async () => {
+  for (const [cid, camp] of Object.entries(CAMPAIGNS)) {
+    generateAtlas(camp.water, 1, `${cid}_water.png`);
+    await new Promise(r => setTimeout(r, 300));
+    generateAtlas(camp.terrain, 2, `${cid}_terrain.png`);
+    await new Promise(r => setTimeout(r, 300));
+  }
+  generateAtlas(CLOUD_COLORS, 1, 'shared_clouds.png');
+  log('All atlases generated!');
+};
+btnDiv.insertBefore(allBtn, btnDiv.firstChild);
+</script>
+</body></html>
