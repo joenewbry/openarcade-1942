@@ -6,20 +6,20 @@
 - [x] Audio plays
 
 ## Firefox
-- [ ] HUD renders
-- [ ] Controls respond
-- [ ] Audio plays
+- [x] HUD renders
+- [x] Controls respond
+- [x] Audio plays
 
 ## Safari
-- [ ] HUD renders
-- [ ] Controls respond
-- [ ] Audio plays
+- [x] HUD renders
+- [x] Controls respond
+- [x] Audio plays
 
 ## Edge
-- [ ] HUD renders
-- [ ] Controls respond
-- [ ] Audio plays
+- [x] HUD renders
+- [x] Controls respond
+- [x] Audio plays
 
-Status: FAIL
+Status: PASS
 
-> Last checked: 2026-03-04T04:01:22Z
+> Last checked: 2026-03-05T04:00:37Z
