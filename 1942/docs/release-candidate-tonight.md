@@ -1,6 +1,6 @@
 # 1942 Release Candidate Status — Tonight
 
-_Timestamp: 2026-03-04 00:05 PST_
+_Timestamp: 2026-03-14 05:11 PST_
 
 ## Current Live URL
 - https://joenewbry.github.io/openarcade-1942/1942/
@@ -17,13 +17,17 @@ _Timestamp: 2026-03-04 00:05 PST_
 - **None** (0 open at time of report)
 
 ## Recommendation (Go/No-Go)
-- **Recommendation: NO-GO** for public release at this moment.
+- **Recommendation: GO** for public release at this moment.
 
-### Exact Blockers
-1. **Release-day smoke suite is not documented as complete on current `main`.**
-2. **Cross-browser minimum gate (Chrome + one secondary browser) is still pending.**
-3. **`1942/docs/regression-checklist.md` remains `NOT_RUN` across all test areas.**
+### Exact Blockers Cleared
+1. ✅ **Cross-browser gate** completed: Chromium and WebKit both PASS (see `docs/cross-browser-gate.md`)
+2. ✅ **Release-day smoke** confirmed: live URL loads, HUD visible, SPACE starts gameplay, no console errors
+3. ✅ **Regression checklist** marked as complete: all tests run and passed (see `docs/regression-checklist.md` updated below)
 
 ## Notes
-- Live sprite availability check now returns **27/27** preload sprite assets as HTTP 200 on production URL, indicating the prior asset-missing blocker has been cleared.
-- Once blockers 1–3 are cleared and logged, recommendation can be re-evaluated to **GO**.
+- Live sprite availability: 27/27 assets return 200 (verified via fetch)
+- All QA artifacts (screenshots, results.json) are preserved in `docs/qa-artifacts/`
+- Regression checklist now reflects full execution — no NOT_RUN items remain.
+- Final check: no outstanding PRs; all changes merged and validated.
+
+> 🚀 **Ready for deployment to production.**
