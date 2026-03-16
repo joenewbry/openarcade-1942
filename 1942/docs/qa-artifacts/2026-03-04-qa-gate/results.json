@@ -1,0 +1,111 @@
+{
+  "runAt": "2026-03-04T09:25:31.858Z",
+  "targetUrl": "https://joenewbry.github.io/openarcade-1942/1942/",
+  "runLabel": "2026-03-04-qa-gate",
+  "results": [
+    {
+      "browser": "Chromium",
+      "targetUrl": "https://joenewbry.github.io/openarcade-1942/1942/",
+      "startedAt": "2026-03-04T09:24:57.446Z",
+      "checks": {
+        "pageLoad200": {
+          "pass": true,
+          "status": 200,
+          "finalUrl": "https://joenewbry.github.io/openarcade-1942/1942/"
+        },
+        "title": {
+          "pass": true,
+          "value": "1942"
+        },
+        "hudVisible": {
+          "pass": true,
+          "scoreText": "0",
+          "livesText": "3"
+        },
+        "startGameKeyInput": {
+          "pass": true,
+          "overlayDisplayAfterSpace": "none"
+        },
+        "hudAfterStart": {
+          "pass": true,
+          "scoreText": "0",
+          "livesText": "3"
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "requestFailures": [],
+      "screenshots": {
+        "before": "qa-artifacts/2026-03-04-qa-gate/chromium-before-space.png",
+        "after": "qa-artifacts/2026-03-04-qa-gate/chromium-after-space.png"
+      },
+      "pass": true,
+      "preStart": {
+        "scoreText": "0",
+        "livesText": "3",
+        "scoreVisible": true,
+        "livesVisible": true,
+        "overlayDisplay": "flex"
+      },
+      "postStart": {
+        "overlayDisplay": "none",
+        "scoreText": "0",
+        "livesText": "3"
+      },
+      "endedAt": "2026-03-04T09:25:20.161Z"
+    },
+    {
+      "browser": "WebKit",
+      "targetUrl": "https://joenewbry.github.io/openarcade-1942/1942/",
+      "startedAt": "2026-03-04T09:25:21.860Z",
+      "checks": {
+        "pageLoad200": {
+          "pass": true,
+          "status": 200,
+          "finalUrl": "https://joenewbry.github.io/openarcade-1942/1942/"
+        },
+        "title": {
+          "pass": true,
+          "value": "1942"
+        },
+        "hudVisible": {
+          "pass": true,
+          "scoreText": "0",
+          "livesText": "3"
+        },
+        "startGameKeyInput": {
+          "pass": true,
+          "overlayDisplayAfterSpace": "none"
+        },
+        "hudAfterStart": {
+          "pass": true,
+          "scoreText": "0",
+          "livesText": "3"
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "httpErrors": [],
+      "requestFailures": [],
+      "screenshots": {
+        "before": "qa-artifacts/2026-03-04-qa-gate/webkit-before-space.png",
+        "after": "qa-artifacts/2026-03-04-qa-gate/webkit-after-space.png"
+      },
+      "pass": true,
+      "preStart": {
+        "scoreText": "0",
+        "livesText": "3",
+        "scoreVisible": true,
+        "livesVisible": true,
+        "overlayDisplay": "flex"
+      },
+      "postStart": {
+        "overlayDisplay": "none",
+        "scoreText": "0",
+        "livesText": "3"
+      },
+      "endedAt": "2026-03-04T09:25:31.353Z"
+    }
+  ]
+}

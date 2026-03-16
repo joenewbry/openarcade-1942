@@ -92,8 +92,9 @@ const POWERUP_SPRITE_MAP = {
   'homing': 'powerup-bomb',         // reuse bomb sprite for homing
 };
 
-function getPlayerSpriteName(planeId, vx) {
-  // ARCADE-069: Completely removed banking/tilt. Plane always uses idle sprite — slides flat.
+function getPlayerSpriteName(planeId, rotation = 0) {
+  if (rotation <= -0.12) return `${planeId}-bank-left`;
+  if (rotation >= 0.12) return `${planeId}-bank-right`;
   return `${planeId}-idle`;
 }
 
@@ -135,6 +136,9 @@ const ROLL_SPEED = 12.2;
 const ROLL_TRAIL_MAX = 4;
 const GRAZE_RADIUS = 56;
 const GRAZE_POINTS = 25;
+const SHIP_ROT_MAX = 0.32;
+const SHIP_ROT_SPRING = 0.2;
+const SHIP_ROT_DAMPING = 0.8;
 
 class Sfx {
   constructor() {
@@ -267,6 +271,8 @@ function makePlayer(planeId) {
     bombInvuln: 0,
     vx: 0,
     vy: 0,
+    rotation: 0,
+    rotationVelocity: 0,
     rollVx: 0,
     rollVy: -1,
     rollCooldown: 0,
@@ -1214,6 +1220,11 @@ function activateBomb(state, game) {
   }
 }
 
+function persistBestScore(state) {
+  state.best = Math.max(state.best, state.score);
+  localStorage.setItem('openarcade_1942_best', String(state.best));
+}
+
 function damagePlayer(state) {
   const p = state.player;
   if (p.invuln > 0 || p.shieldTimer > 0 || p.rollInvuln > 0 || p.bombInvuln > 0) return;
@@ -1251,8 +1262,7 @@ function damagePlayer(state) {
   state.flashTimer = 8;
 
   if (p.lives <= 0) {
-    state.best = Math.max(state.best, state.score);
-    localStorage.setItem('openarcade_1942_best', String(state.best));
+    persistBestScore(state);
     return true;
   }
   return false;
@@ -1384,6 +1394,7 @@ function moveToNextCampaign(state, game) {
   state.groundEnemiesSpawned = new Set();
 
   if (state.campaignIndex >= CAMPAIGNS.length) {
+    persistBestScore(state);
     game.setState('over');
     game.showOverlay('Victory', `Final Score: ${state.score}\nPress SPACE to fly again`);
     return;
@@ -1599,6 +1610,18 @@ function updateGame(state, game, input) {
     if (Math.abs(player.vy) < 0.01) player.vy = 0;
     player.x += player.vx;
     player.y += player.vy;
+  }
+
+  const lateralSpeedNorm = speed > 0 ? clamp(player.vx / speed, -1, 1) : 0;
+  const rollBias = player.rollTimer > 0 ? clamp(player.rollVx * 0.65, -1, 1) : 0;
+  const targetRotation = clamp((lateralSpeedNorm + rollBias) * SHIP_ROT_MAX, -SHIP_ROT_MAX, SHIP_ROT_MAX);
+  player.rotationVelocity += (targetRotation - player.rotation) * SHIP_ROT_SPRING;
+  player.rotationVelocity *= SHIP_ROT_DAMPING;
+  player.rotation += player.rotationVelocity;
+  player.rotation = clamp(player.rotation, -SHIP_ROT_MAX, SHIP_ROT_MAX);
+  if (Math.abs(player.rotation) < 0.001 && Math.abs(player.rotationVelocity) < 0.001) {
+    player.rotation = 0;
+    player.rotationVelocity = 0;
   }
 
   player.x = clamp(player.x, 24, W - player.w - 24);
@@ -3031,10 +3054,8 @@ export function createGame() {
     }
 
     const playerAlpha = (state.player.invuln > 0 || state.player.bombInvuln > 0) && state.tick % 6 < 3 ? 0.55 : 1;
-    const bankOffset = 0; // ARCADE-047: removed tilt — plane slides smoothly
-    const playerImgName = state.player.rollTimer > 0
-      ? getPlayerSpriteName(state.player.plane.id, 0) // idle during roll
-      : getPlayerSpriteName(state.player.plane.id, state.player.vx);
+    const bankOffset = Math.round(state.player.rotation * 10);
+    const playerImgName = getPlayerSpriteName(state.player.plane.id, state.player.rotation);
     if (renderer.hasSpriteTexture(playerImgName)) {
       renderer.drawSprite(playerImgName, state.player.x + bankOffset, state.player.y, state.player.w, state.player.h, playerAlpha);
     } else {

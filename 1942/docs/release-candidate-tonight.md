@@ -1,17 +1,12 @@
 # 1942 Release Candidate Status — Tonight
 
-_Timestamp: 2026-03-14 05:11 PST_
+_Timestamp: 2026-03-16 04:00 PST_
 
 ## Current Live URL
 - https://joenewbry.github.io/openarcade-1942/1942/
 
 ## Merged PRs Tonight (PT)
-- **#2** — `1942: restore missing sprite assets for live build`  
-  Merged: **2026-03-03 23:03:39 PST**  
-  https://github.com/joenewbry/openarcade-1942/pull/2
-- **#1** — `1942: refine enemy wave progression for T015`  
-  Merged: **2026-03-03 23:03:49 PST**  
-  https://github.com/joenewbry/openarcade-1942/pull/1
+- **None** (no PRs merged since last pulse)
 
 ## Open PRs
 - **None** (0 open at time of report)
@@ -30,4 +25,4 @@ _Timestamp: 2026-03-14 05:11 PST_
 - Regression checklist now reflects full execution — no NOT_RUN items remain.
 - Final check: no outstanding PRs; all changes merged and validated.
 
-> 🚀 **Ready for deployment to production.**
+> 🚀 **Ready for deployment to production.
