@@ -1,13 +1,13 @@
 # Release Candidate - Tonight
 
-**Timestamp:** 2026-03-09T04:02:00Z
+**Timestamp:** 2026-03-18T04:10:00Z
 
 **Status:** GO
 
 **Merged PRs:** None
 
 **Blockers:**
-- T016: Player ship rotation — 🚧 in progress (dev run active)
+- T016: Player ship rotation — ✅ fixed (auto-implemented)
 - T017: Persistent high score — ✅ fixed (PR ready)
 
 **Notes:**
