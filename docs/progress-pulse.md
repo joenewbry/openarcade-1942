@@ -1,13 +1,13 @@
 # Progress Pulse
 
-**Last updated:** 2026-03-24T11:00:00Z
+**Last updated:** 2026-03-25T11:00:41Z
 
 ## Status
 - ✅ Cross-browser gate: PASS
 - ✅ Regression checklist: all items run
 - ✅ Live site: reachable, core HUD functional
-- ✅ T016: Player ship rotation — fixed (auto-implemented)
-- ✅ T017: Persistent high score — fixed
+- ✅ T016: Player ship rotation — DONE
+- ✅ T017: Persistent high score — DONE
 
 ## Next
 All critical items complete. Ready for final QA review and RC tag.
