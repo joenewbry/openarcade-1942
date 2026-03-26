@@ -1,6 +1,6 @@
 # 1942 Release Candidate Status — Tonight
 
-_Timestamp: 2026-03-16 04:00 PST_
+_Timestamp: 2026-03-26 04:00 PST_
 
 ## Current Live URL
 - https://joenewbry.github.io/openarcade-1942/1942/
